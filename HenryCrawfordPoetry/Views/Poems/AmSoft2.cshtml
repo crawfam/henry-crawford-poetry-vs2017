@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "American Software 2.0";
+}
+
+@section Styles {
+
+
+    <!-- Google Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu+Condensed" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Manuale" rel="stylesheet">
+
+
+    <link href="@Url.Content("~/SiteCSS/site.css")" rel="stylesheet" type="text/css" />
+
+}
+
+      <!-- SECTION -->
+    <section class="sct-color-1 slice">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12"> 
+                    @Html.Raw(File.ReadAllText(Server.MapPath("/App_Data/PoemsTextAmSoft2/" + @ViewBag.PoemFileName)))
+                    @if(Request.UrlReferrer != null)
+                    {
+                        <a class="btn btn-sm btn-b-base-1 mt-15" onclick="history.go(-1); return false;" href="#">Back</a><br />
+                    } 
+                </div> 
+            </div>
+
+        </div>
+    </section>
+
+

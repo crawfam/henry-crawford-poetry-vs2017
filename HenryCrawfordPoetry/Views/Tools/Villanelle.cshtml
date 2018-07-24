@@ -1,0 +1,291 @@
+﻿@model Models.VillanelleModel
+
+@{
+    ViewBag.Title = "Villanelle Village";
+}
+
+@section AdditionalMetatags
+{
+    <meta property="og:url" content="http://henrycrawfordpoetry.com/Tools/Villanelle" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Villanelle Village" />
+    <meta property="og:description" content="A tool for writing villanelle poems" />
+    <meta property="og:image" content="http://henrycrawfordpoetry.com/Images/Website/VillanelleVillageLogoMd.jpg" />
+}
+
+<section class="sct-color-1 slice">
+    
+    <div class="container">
+        <div class="row">           
+
+
+            <div class="col-md-9">
+
+            <div class="alert alert-info">
+                <strong>Welcome to Villanelle Village.</strong> The Villanelle is a challenging poetic form. There are five tercets followed by one quatrain. The initial tercet sets up two repeating refrains in the first and third lines of the poem. These are repeated in alternating stanzas and repeat for a final time as the last two lines of the poem.
+                <br /><br />
+                This tool lets you work with each of the 19 lines that make up the stanzas. The first stanza is the most important since it sets up the two repeating refrains. Hit the "Set" button for each line to automatically set the text for the applicable lines. In the case of the first line, the last word of that line will be inserted as hints into the lines which must rhyme with that word. Similarly, setting the second line will fill all applicable lines with the last word of that line as a hint. Of course, lines can be changed and new rhymes can be added as needed. When you are done, hit Create Villanelle and you will get a downloadable text document which you can use as a template by copying it into your regular writing word processor. 
+            </div>
+
+            </div>
+
+           <div class="col-md-3">
+                 <div class="listing-image">
+                    <img width="325" src="~/Images/Website/VillanelleVillageLogoSm.jpg" alt="Villanelle Village Logo" />
+                 </div>
+            </div>
+
+
+        </div>
+
+        <div class="col-md-12">
+            <div>
+                <!-- Forms -->
+
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="section-title-wrapper style-1 v1">
+                            <h3 class="section-title section-title-sm left">
+                                <span>Write Your Villanelle</span>
+                            </h3>
+                        </div>
+
+                    <form method="POST" action="CreateVillanelle" >
+                            
+                            <div class="form-group form-inline">
+                                <label for="Title">Title</label>
+                                <br />
+                                <input type="text" style="width:400px" class="form-control" id="Title" name="Title" value="@Model.Title" placeholder="Title">
+                            </div>
+
+
+                            <p><b>Stanza 1</b></p>
+                            <hr />
+                                                
+                            <div class="form-group form-inline">
+                                <label for="Line1">Line 1</label>                                
+                                <input type="text" style="width:400px" class="form-control" id="Line1" name="Line1" value="@Model.Line1" placeholder="Line 1 (Refrain One, Repeating Rhyme A)">
+                                <button type="button" onclick="setLines(document.getElementById('Line1').value, 'refrain1')" class="btn btn-base-1">Set</button>
+                                <button type="button" onclick="getRhyme(document.getElementById('Line1').value);" class="btn btn-base-1">Find Rhyme</button>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label for="Line2">Line 2</label>
+                                <input type="text" style="width:400px" class="form-control" id="Line2" name="Line2" value="@Model.Line2" placeholder="Line Two (Repeating Rhyme B)">
+                                <button type="button" onclick="setLines(document.getElementById('Line2').value, 'B_Rhymes')" class="btn btn-base-1">Set</button>
+                                <button type="button" onclick="getRhyme(document.getElementById('Line2').value);" class="btn btn-base-1">Find Rhyme</button>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label for="Line3">Line 3</label>
+                                <input type="text" style="width:400px" class="form-control" id="Line3" name="Line3" value="@Model.Line3" placeholder="Line Three (Refrain Two, Repeating Rhyme A)">
+                                <button type="button" onclick="setLines(document.getElementById('Line3').value, 'refrain2')" class="btn btn-base-1">Set</button>
+                                <button type="button" onclick="getRhyme(document.getElementById('Line3').value);" class="btn btn-base-1">Find Rhyme</button>
+                            </div>
+
+                            <p><b>Stanza 2</b></p>
+                            <hr />
+
+                            <div class="form-group form-inline">
+                                <label for="Line4">Line 4</label>                             
+                                <input type="text" style="width:400px" class="form-control" id="Line4" name="Line4" value="@Model.Line4" placeholder="Line Four (Rhyme A")>
+                                <button type="button" onclick="getRhyme(document.getElementById('Line4').value);" class="btn btn-base-1">Find Rhyme</button>
+                            </div>
+
+                            <div class="form-group form-inline">
+                                <label for="Line5">Line 5</label>
+                                <input type="text" style="width:400px" class="form-control" id="Line5" name="Line5" value="@Model.Line5" placeholder="Line Five (Rhyme B")>
+                                <button type="button" onclick="getRhyme(document.getElementById('Line5').value);" class="btn btn-base-1">Find Rhyme</button>
+                            </div>
+
+                            <div class="form-group form-inline">
+                                <label for="Line6">Line 6</label>
+                                <input type="text" style="width:400px" class="form-control" id="Line6" name="Line6" value="@Model.Line6" placeholder="Line Six (Refrain One)">
+                                <button type="button" onclick="getRhyme(document.getElementById('Line6').value);" class="btn btn-base-1">Find Rhyme</button>
+                            </div>
+
+                            <p><b>Stanza 3</b></p>
+                            <hr />
+
+                            <div class="form-group form-inline">
+                                <label for="Line7">Line 7</label>
+                                <input type="text" style="width:400px" class="form-control" id="Line7" name="Line7" value="@Model.Line7" placeholder="Line Seven (Rhyme A)">
+                                <button type="button" onclick="getRhyme(document.getElementById('Line7').value);" class="btn btn-base-1">Find Rhyme</button>
+                            </div>
+
+                            <div class="form-group form-inline">
+                                <label for="Line8">Line 8</label>
+                                <input type="text" style="width:400px" class="form-control" id="Line8" name="Line8" value="@Model.Line8" placeholder="Line Eight (Rhyme B)">
+                                <button type="button" onclick="getRhyme(document.getElementById('Line8').value);" class="btn btn-base-1">Find Rhyme</button>
+                            </div>
+
+                            <div class="form-group form-inline">
+                                <label for="Line9">Line 9</label>
+                                <input type="text" style="width:400px" class="form-control" id="Line9" name="Line9" value="@Model.Line9" placeholder="Line Nine (Refrain Two)">
+                                <button type="button" onclick="getRhyme(document.getElementById('Line9').value);" class="btn btn-base-1">Find Rhyme</button>
+                            </div>
+
+                            <p><b>Stanza 4</b></p>
+                            <hr />
+
+                            <div class="form-group form-inline">
+                                <label for="Line10">Line 10</label>
+                                <input type="text" style="width:400px" class="form-control" id="Line10" name="Line10" value="@Model.Line10" placeholder="Line Ten (Rhyme A)">
+                                <button type="button" onclick="getRhyme(document.getElementById('Line10').value);" class="btn btn-base-1">Find Rhyme</button>
+                            </div>
+
+                            <div class="form-group form-inline">
+                                <label for="Line11">Line 11</label>
+                                <input type="text" style="width:400px" class="form-control" id="Line11" name="Line11" value="@Model.Line11" placeholder="Line Eleven (Rhyme B)">
+                                <button type="button" onclick="getRhyme(document.getElementById('Line11').value);" class="btn btn-base-1">Find Rhyme</button>
+                            </div>
+
+                            <div class="form-group form-inline">
+                                <label for="Line12">Line 12</label>
+                                <input type="text" style="width:400px" class="form-control" id="Line12" name="Line12" value="@Model.Line12" placeholder="Line Twelve (Refrain One)">
+                                <button type="button" onclick="getRhyme(document.getElementById('Line12').value);" class="btn btn-base-1">Find Rhyme</button>
+                            </div>
+
+                            <p><b>Stanza 5</b></p>
+                            <hr />
+
+                            <div class="form-group form-inline">
+                                <label for="Line13">Line 13</label>
+                                <input type="text" style="width:400px" class="form-control" id="Line13" name="Line13" value="@Model.Line13" placeholder="Line Thirteen (Rhyme A)">
+                                <button type="button" onclick="getRhyme(document.getElementById('Line13').value);" class="btn btn-base-1">Find Rhyme</button>
+                            </div>
+
+                            <div class="form-group form-inline">
+                                <label for="Line14">Line 14</label>
+                                <input type="text" style="width:400px" class="form-control" id="Line14" name="Line14" value="@Model.Line14" placeholder="Line Fourteen (Rhyme B)">
+                                <button type="button" onclick="getRhyme(document.getElementById('Line14').value);" class="btn btn-base-1">Find Rhyme</button>
+                            </div>
+
+                            <div class="form-group form-inline">
+                                <label for="Line15">Line 15</label>
+                                <input type="text" style="width:400px" class="form-control" id="Line15" name="Line15" value="@Model.Line15" placeholder="Line Fifteen (Refrain Two)">
+                                <button type="button" onclick="getRhyme(document.getElementById('Line15').value);" class="btn btn-base-1">Find Rhyme</button>
+                            </div>
+
+                            <p><b>Stanza 6 - The final quatrain</b></p>
+                            <hr />
+
+                            <div class="form-group form-inline">
+                                <label for="Line16">Line 16</label>
+                                <input type="text" style="width:400px" class="form-control" id="Line16" name="Line16" value="@Model.Line16" placeholder="Line Sixteen (Rhyme A)">
+                                <button type="button" onclick="getRhyme(document.getElementById('Line16').value);" class="btn btn-base-1">Find Rhyme</button>
+                            </div>
+
+                            <div class="form-group form-inline">
+                                <label for="Line17">Line 17</label>
+                                <input type="text" style="width:400px" class="form-control" id="Line17" name="Line17" value="@Model.Line17" placeholder="Line Seventeen (Rhyme B)">
+                                <button type="button" onclick="getRhyme(document.getElementById('Line17').value);" class="btn btn-base-1">Find Rhyme</button>
+                            </div>
+
+                            <div class="form-group form-inline">
+                                <label for="Line18">Line 18</label>
+                                <input type="text" style="width:400px" class="form-control" id="Line18" name="Line18" value="@Model.Line18" placeholder="Line Eighteen (Refrain One)">
+                                <button type="button" onclick="getRhyme(document.getElementById('Line18').value);" class="btn btn-base-1">Find Rhyme</button>
+                            </div>
+
+                            <div class="form-group form-inline">
+                                <label for="Line19">Line 19</label>
+                                <input type="text" style="width:400px" class="form-control" id="Line19" name="Line19" value="@Model.Line19" placeholder="Line Nineteen (Refrain Two)">
+                                <button type="button" onclick="getRhyme(document.getElementById('Line19').value);" class="btn btn-base-1">Find Rhyme</button>
+                            </div>
+                            
+                            <hr />
+
+                            <div class="form-group form-inline">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-base-1">Create Villanelle</button>
+                                </div>
+                            </div>
+
+                    </form>
+
+                    </div>
+
+                    <div class="col-md-2">
+
+                        <div class="section-title-wrapper style-1 v1">
+                            <h3 class="section-title section-title-sm left">
+                                <span>Rhymes</span>
+                            </h3>
+                        </div>
+
+                        <div class="col">
+
+                        <ul style="list-style-type:none; padding:0; margin:15px;" id="wordList"></ul>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-3">
+
+                        <div class="section-title-wrapper style-1 v1">
+                            <h3 class="section-title section-title-sm left">
+                                <span>Links</span>
+                            </h3>
+                        </div>
+
+                        <ul class="list-style-1 v2">
+                            <li><a target="_blank" href="https://en.wikipedia.org/wiki/Villanelle">Wikipedia</a></li>
+                            <li><a target="_blank" href="https://www.wikihow.com/Write-a-Villanelle">Wikihow</a></li>
+                            <li><a target="_blank" href="https://www.poets.org/poetsorg/text/villanelle-poetic-form">Academy of American Poets</a></li>
+                            <li><a target="_blank" href="http://www.webexhibits.org/poetry/explore_classic_villanelle_examples.html">Villanelle Examples</a></li>                                        
+                            <li><a target="_blank" href="http://www.writing-world.com/poetry/villanelle.shtml">Writing-World Poetic Forms</a></li>
+                        </ul>
+
+                        <br /><br />
+
+@*                        <form method="POST" action="GetVillanelle">
+
+                         <div class="section-title-wrapper style-1 v1">
+                            <h3 class="section-title section-title-sm left">
+                                <span>Load-a-Poem</span>
+                            </h3>
+                        </div>
+
+                            <p>Select a poem from below and load it into the program using the Load button.</p>
+                                                      
+
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Do Not Go Gentle (Dylan Thomas)
+                            </label><br />
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> One Art (Elizabeth Bishop)
+                            </label><br />
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> Mad Girl’s Love Song (Sylvia Plath)
+                            </label>
+
+                            <br /><br />
+
+                           <div class="form-group form-inline">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-base-1">Load the Poem</button>
+                                </div>
+                            </div>
+
+                        </form>*@
+
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <br />
+            
+        </div>
+    </div>
+
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/custom.js"></script>
+}

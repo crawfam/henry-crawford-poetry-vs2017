@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<title>The Orientation</title>
+
+    <!-- Google Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu+Condensed" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" />
+
+    <!-- Bootstrap inclusion  -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous" />
+
+    <!-- Files needed for popover and tooltips MUST BE REFERENCED BEFORE BOOTSTRAP.MIN.JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <style>
+        body {
+            /*font-family: 'Sedgwick Ave Display', cursive;*/
+            /*font-family: 'Ubuntu Condensed', sans-serif;*/
+            /*font-family: 'Roboto', sans-serif;*/
+            font-family: 'Josefin Sans', sans-serif;
+            background-color: #FFFFFF;
+        }
+
+        .heading-footer-strip {
+            background-color: #ffffff;
+            font-family: 'Josefin Sans', sans-serif;
+            color: #ffffff;
+            padding-left: 30px;
+        }
+
+        .stanza {
+            padding-left: 30px;
+        }
+
+        .line {
+            text-indent: -30px;
+        }
+
+        .tooltip {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 16px;
+        }
+
+        .tooltip-inner {
+            background-color: #0C67f9;
+            color: #FFFFFF;
+        }
+
+        .popover-title {
+            font-family: 'Josefin Sans', sans-serif;
+            background-color: #FFFFFF;
+            color: #0C67f9;
+        }
+
+        .popover-content {
+            font-family: 'Josefin Sans', sans-serif;
+            background-color: #0C67f9;
+            color: #FFFFFF;
+            padding: 25px;
+        }
+
+        .container-fluid {
+            background-color: #ffffff;
+        }
+
+        .poem h1, h2, h3, h4 {
+            color: #000000;
+        }
+    </style>
+	
+</head>
+
+<!-- https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-fluid-layout.php -->
+
+<body>
+
+    <nav class="navbar heading-footer-strip">
+
+        <div>
+            <h4><a id="home-link" href="index.html#">American Software 2.0</a> </h4>
+        </div>
+
+    </nav>
+
+    <div id="poem_the_sentence" class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-md-5 col-md-offset-1  text-nowrap ">
+                <h2>The Orientation</h2>
+                <a href="#" onclick="textToggle('#s1');">[Good Morning]</a> <span id="s1" style="display:none;">  <a href="#" onclick="textToggle('#s2');">[So Glad]</a></span> <span id="s2" style="display:none;">  <a href="#" onclick="textToggle('#s3');">[To Meet You]</a></span> <span id="s3" style="display:none;">  <a href="#" onclick="textToggle('#s4');">[We'll Show You Around]</a></span> <span id="s4" style="display:none;">  <a href="#" onclick="textToggle('#s5');">[Your Cube Will Be Over There]</a></span><br />
+                <span id="s5" style="display:none;">  <a href="#" onclick="textToggle('#s6');">[Where Mr. Davidson]</a></span> <span id="s6" style="display:none;">  <a href="#" onclick="textToggle('#s7');">[Had An Office]</a></span> <span id="s7" style="display:none;">  <a href="#" onclick="textToggle('#s8');">[Before He Retired]</a></span> <span id="s8" style="display:none;">  <a href="#" onclick="textToggle('#s9');">[And Sandy From HR]</a></span> <span id="s9" style="display:none;">  <a href="#" onclick="textToggle('#s10');">[Took Over]</a></span><br />
+                <span id="s10" style="display:none;">  <a href="#" onclick="textToggle('#s11');">[Because Mr. Davidson]</a></span> <span id="s11" style="display:none;">  <a href="#" onclick="textToggle('#s12');">[Was a "Lifer"]</a></span> <span id="s12" style="display:none;">  <a href="#" onclick="textToggle('#s13');">[And Had To Go]</a></span> <span id="s13" style="display:none;">  <a href="#" onclick="textToggle('#s14');">[He Used To Take The Train]</a></span> <span id="s14" style="display:none;">  <a href="#" onclick="textToggle('#s15');">[Up To New York]</a></span><br />
+                <span id="s15" style="display:none;">  <a href="#" onclick="textToggle('#s16');">[On Weekends]</a></span> <span id="s16" style="display:none;">  <a href="#" onclick="textToggle('#s17');">[To Visit a Guy Named Sam]</a></span> <span id="s17" style="display:none;">  <a href="#" onclick="textToggle('#s18');">[Who Was His Lover]</a></span> <span id="s18" style="display:none;">  <a href="#" onclick="textToggle('#s19');">[But You Couldn't Say That]</a></span> <span id="s19" style="display:none;">  <a href="#" onclick="textToggle('#s20');">[In Those Days]</a></span><br />
+                <span id="s20" style="display:none;">  <a href="#" onclick="textToggle('#s21');">[Sam Was In Advertising]</a></span> <span id="s21" style="display:none;">  <a href="#" onclick="textToggle('#s22');">[So He Could Be]</a></span> <span id="s22" style="display:none;">  <a href="#" onclick="textToggle('#s23');">[More Open]</a></span> <span id="s23" style="display:none;">  <a href="#" onclick="textToggle('#s24');">[But His Secretary]</a></span> <span id="s24" style="display:none;">  <a href="#" onclick="textToggle('#s25');">[Betsy Williams]</a></span><br />
+                <span id="s25" style="display:none;">  <a href="#" onclick="textToggle('#s26');">[Was One Of Eight Girls]</a></span> <span id="s26" style="display:none;">  <a href="#" onclick="textToggle('#s27');">[From a Religious Family]</a></span> <span id="s27" style="display:none;">  <a href="#" onclick="textToggle('#s28');">[Up In The Bronx]</a></span> <span id="s28" style="display:none;">  <a href="#" onclick="textToggle('#s29');">[With a Father]</a></span> <span id="s29" style="display:none;">  <a href="#" onclick="textToggle('#s30');">[Who Worked As a Printer]</a></span><br />
+                <span id="s30" style="display:none;">  <a href="#" onclick="textToggle('#s31');">[With a Union Card]</a></span> <span id="s31" style="display:none;">  <a href="#" onclick="textToggle('#s32');">[And He Did Not Like Gays]</a></span> <span id="s32" style="display:none;">  <a href="#" onclick="textToggle('#s33');">[And Wouldn't Work]</a></span> <span id="s33" style="display:none;">  <a href="#" onclick="textToggle('#s34');">[With Them]</a></span> <span id="s34" style="display:none;">  <a href="#" onclick="textToggle('#s35');">[Since They Were Not]</a></span><br />
+                <span id="s35" style="display:none;">  <a href="#" onclick="textToggle('#s36');">[Like Him]</a></span> <span id="s36" style="display:none;">  <a href="#" onclick="textToggle('#s37');">[Or His Buddy Bill]</a></span> <span id="s37" style="display:none;">  <a href="#" onclick="textToggle('#s38');">[Who Had A Job]</a></span> <span id="s38" style="display:none;">  <a href="#" onclick="textToggle('#s39');">[Reading Meters]</a></span> <span id="s39" style="display:none;">  <a href="#" onclick="textToggle('#s40');">[For Con Ed]</a></span>  <span id="s40" style="display:none;">  <a href="#" onclick="textToggle('#s41');">[And He Was Let Inside]</a></span><br />
+                <span id="s41" style="display:none;">  <a href="#" onclick="textToggle('#s42');">[A Lot Of Homes]</a></span> <span id="s42" style="display:none;">  <a href="#" onclick="textToggle('#s43');">[And Fathered Twenty Children]</a></span> <span id="s43" style="display:none;">  <a href="#" onclick="textToggle('#s44');">[In His Territory]</a></span> <span id="s44" style="display:none;">  <a href="#" onclick="textToggle('#s45');">[In The Neighborhoods]</a></span> <span id="s45" style="display:none;">  <a href="#" onclick="textToggle('#s46');">[Between Brooklyn]</a></span><br />
+                <span id="s46" style="display:none;">  <a href="#" onclick="textToggle('#s47');">[And Queens]</a></span> <span id="s47" style="display:none;">  <a href="#" onclick="textToggle('#s48');">[And One Of Them]</a></span> <span id="s48" style="display:none;">  <a href="#" onclick="textToggle('#s49');">[Was An Irish Kid]</a></span> <span id="s49" style="display:none;">  <a href="#" onclick="textToggle('#s50');">[They Called "Eddie The Red"]</a></span> <span id="s50" style="display:none;">  <a href="#" onclick="textToggle('#s51');">[Who Would Laugh Hysterically]</a></span><br />
+                <span id="s51" style="display:none;">  <a href="#" onclick="textToggle('#s52');">[Whenever He Smoked Pot]</a></span> <span id="s52" style="display:none;">  <a href="#" onclick="textToggle('#s53');">[Which He Did A Lot]</a></span> <span id="s53" style="display:none;">  <a href="#" onclick="textToggle('#s54');">[Since Coming Back]</a></span> <span id="s54" style="display:none;">  <a href="#" onclick="textToggle('#s55');">[From Vietnam]</a></span> <span id="s55" style="display:none;">  <a href="#" onclick="textToggle('#s56');">[Where He Lost His Friend]</a></span><br />
+                <span id="s56" style="display:none;">  <a href="#" onclick="textToggle('#s57');">[Jimmy]</a></span> <span id="s57" style="display:none;">  <a href="#" onclick="textToggle('#s58');">[Whose Mother]</a></span> <span id="s58" style="display:none;">  <a href="#" onclick="textToggle('#s59');">[Joanie]</a></span> <span id="s59" style="display:none;">  <a href="#" onclick="textToggle('#s60');">[Was The Brightest Student At Christ The King]</a></span> <span id="s60" style="display:none;">  <a href="#" onclick="textToggle('#s61');">[But Didn't Go To College]</a></span><br />
+                <span id="s61" style="display:none;">  <a href="#" onclick="textToggle('#s62');">[Because That Was Not An Option]</a></span> <span id="s62" style="display:none;">  <a href="#" onclick="textToggle('#s63');">[For Girls]</a></span> <span id="s63" style="display:none;">  <a href="#" onclick="textToggle('#s64');">[So She Took A Job]</a></span> <span id="s64" style="display:none;">  <a href="#" onclick="textToggle('#s65');">[At The Playtex Factory]</a></span> <span id="s65" style="display:none;">  <a href="#" onclick="textToggle('#s66');">[Where She Never]</a></span><br />
+                <span id="s66" style="display:none;">  <a href="#" onclick="textToggle('#s67');">[Filled The Hole]</a></span> <span id="s67" style="display:none;">  <a href="#" onclick="textToggle('#s68');">[Left By Her Dad]</a></span> <span id="s68" style="display:none;">  <a href="#" onclick="textToggle('#s69');">[Who Lost His Left Arm]</a></span> <span id="s69" style="display:none;">  <a href="#" onclick="textToggle('#s70');">[In a Car Crash]</a></span> <span id="s70" style="display:none;">  <a href="#" onclick="textToggle('#s71');">[Coming Back]</a></span> <span id="s71" style="display:none;">  <a href="#" onclick="textToggle('#s72');">[From The Second]</a></span><br />
+                <span id="s72" style="display:none;">  <a href="#" onclick="textToggle('#s73');">[World War]</a></span> <span id="s73" style="display:none;">  <a href="#" onclick="textToggle('#s74');">[And Settled In As a Regular]</a></span> <span id="s74" style="display:none;">  <a href="#" onclick="textToggle('#s75');">[At The American Legion]</a></span> <span id="s75" style="display:none;">  <a href="#" onclick="textToggle('#s76');">[Where He Was Known As Bob]</a></span> <span id="s76" style="display:none;">  <a href="#" onclick="textToggle('#s77');">[Until He Died]</a></span><br />
+                <span id="s77" style="display:none;">  <a href="#" onclick="textToggle('#s78');">[Sometime]</a></span> <span id="s78" style="display:none;">  <a href="#" onclick="textToggle('#s79');">[Back In The 60's]</a></span> <span id="s79" style="display:none;">  <a href="#" onclick="textToggle('#s80');">[So There]</a></span> <span id="s80" style="display:none;">  <a href="#" onclick="textToggle('#s81');">[Do You Have Any Questions]</a></span> <span id="s81" style="display:none;">  <a href="#" onclick="textToggle('#s82');">[Make Yourself At Home]</a></span> <span id="s82" style="display:none;">  <a href="#" onclick="textToggle('#s83');">[We'll Stop By Later]</a></span><br />
+                <span id="s83" style="display:none;">  <a href="#" onclick="textToggle('#s84');">[See How You're Doing]</a></span> <span id="s84" style="display:none;">  <a href="#" onclick="textToggle('#s85');">[Make Sure]</a></span> <span id="s85" style="display:none;">  <a href="#" onclick="textToggle('#s86');">[Everything]</a></span> <span id="s86" style="display:none;">  <a href="#" onclick="textToggle('#s87');">[Is All Right]</a></span> <span id="s87" style="display:none;">  [Welcome Aboard]</span>
+                <br />
+            </div>            
+        </div>                
+        <footer class="navbar-default navbar-fixed-bottom">
+            <div class="row heading-footer-strip">
+                <div>
+                    <h4>&copy; Copyright 2017 Henry Crawford</h4>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+
+        $(document).ready(function () {
+            $("[data-toggle='tooltip']").tooltip();
+            $('[data-toggle="popover"]').popover();            
+        });
+
+        // needed only for The Sentence
+        function textToggle(id)
+        {
+            $(id).toggle("slow");
+        }
+
+        
+    </script>
+
+</body>
+
+</html>

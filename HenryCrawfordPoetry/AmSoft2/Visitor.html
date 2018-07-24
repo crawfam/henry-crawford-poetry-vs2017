@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<title>The Visitor</title>
+
+    <!-- Google Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu+Condensed" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" />
+
+    <!-- Bootstrap inclusion  -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous" />
+
+    <!-- Files needed for popover and tooltips MUST BE REFERENCED BEFORE BOOTSTRAP.MIN.JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <style>
+        body {
+            /*font-family: 'Sedgwick Ave Display', cursive;*/
+            /*font-family: 'Ubuntu Condensed', sans-serif;*/
+            /*font-family: 'Roboto', sans-serif;*/
+            font-family: 'Josefin Sans', sans-serif;
+            background-color: #FFFFFF;
+        }
+
+        .heading-footer-strip {
+            background-color: #ffffff;
+            font-family: 'Josefin Sans', sans-serif;
+            color: #ffffff;
+            padding-left: 30px;
+        }
+
+        .stanza {
+            padding-left: 30px;
+        }
+
+        .line {
+            text-indent: -30px;
+        }
+
+        .tooltip {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 16px;
+        }
+
+        .tooltip-inner {
+            background-color: #0C67f9;
+            color: #FFFFFF;
+        }
+
+        .popover-title {
+            font-family: 'Josefin Sans', sans-serif;
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+
+        .popover-content {
+            font-family: 'Josefin Sans', sans-serif;
+            background-color: #F5F5F5;
+            color: #000000;
+            padding: 25px;
+        }
+
+        .container-fluid {
+            background-color: #ffffff;
+        }
+
+        .poem h1, h2, h3, h4 {
+            color: #000000;
+        }
+    </style>
+	
+</head>
+
+<!-- https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-fluid-layout.php -->
+
+<body>
+
+    <nav class="navbar heading-footer-strip">
+
+        <div>
+            <h4><a id="home-link" href="index.html#">American Software 2.0</a> </h4>
+        </div>
+
+    </nav>
+
+    <div id="poem_the_vistor" class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-md-5 col-md-offset-1  text-nowrap ">
+                <h2>The Visitor</h2>
+                <p>
+                    The <a href="#" data-toggle="popover" data-placement="bottom" data-trigger="focus" title="Alzheimer's" data-content="Approximately 5 million people are living with Alzheimer's disease in the United States.">Alzheimer's</a> doors open blue<br />
+                    and hospital white. She was here<br />
+                    only yesterday. She called me<br /><a href="#" data-placement="right" data-toggle="popover" data-trigger="focus"  title="George" data-content="John, Joe, Jaimie. He'd forgotten many of them. Bob or Robert? Bill, Billy or William? Time had erased them all.">George</a>
+                    Today she thinks I don’t
+                </p>
+
+                <p>
+                    remember. You have to feel<br />
+                    sorry. You should have heard us<br />
+                    talking for hours. Now I guess<br />
+                    my answers. A penny saved is
+                </p>
+
+                <p>
+                    money burned? A stitch in time<br />
+                    will give you nine? All around<br />
+                    the table. Faces so strange<br />
+                    <a href="#" data-placement="top" data-toggle="popover" data-trigger="focus"  title="Many times" data-content="Her visits began to trail off after the first few years.">Many times</a> it’s hard to say
+                </p>
+
+                <p>
+                    what I should be seeing. When<br />
+                    the Alzheimer’s doors shut<br />
+                    behind us. Swinging blue<br />
+                    and <a href="#" data-placement="top" data-toggle="popover" data-trigger="focus" title="hospital" data-content="She went through the automatic doors; the gift shop; the long lit hallway; past the portraits of the founders; the elevator; the antiseptic floors; the professionals gathered around the nursing station.">hospital</a> white. She comes
+                </p>
+
+                <p>
+                    with my old “Surf’s Up!” shirt.<br />
+                    She wants me to recall. There<br />
+                    was a <a href="#" data-placement="top" data-toggle="popover" data-trigger="focus"  title="beach" data-content="They baught a beach house. It was a long drive. When they got near he would say, &quot;Open up the widows. Smell the ocean coming in.&quot;">beach</a>. Miles of ocean waves<br />
+                    blue as the open windows of this
+                </p>
+
+                <p>
+                    dayroom. She’s on her way now.<br />
+                    Doors go blue and hospital white.<br />
+                    But whose pursed kiss? I tighten<br />
+                    my eyes. Whose hand <a href="#" data-placement="top" data-trigger="focus"  data-toggle="popover" title="Alzheimer's Disease" data-content="Every 66 seconds, someone in the United States develops Alzheimer's disease.">waving</a>?
+                </p>
+            </div>
+        </div>    
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />                
+                    
+        <footer class="navbar-default navbar-fixed-bottom">
+            <div class="row heading-footer-strip">
+                <div>
+                    <h4>&copy; Copyright 2017 Henry Crawford</h4>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+
+        $(document).ready(function () {
+            $("[data-toggle='tooltip']").tooltip();
+            $('[data-toggle="popover"]').popover();            
+        });
+        
+    </script>
+
+</body>
+
+</html>

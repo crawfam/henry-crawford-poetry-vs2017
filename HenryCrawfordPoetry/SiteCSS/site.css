@@ -1,0 +1,64 @@
+﻿    .poem {
+        /*font-family: 'Sedgwick Ave Display', cursive;*/
+        /*font-family: 'Ubuntu Condensed', sans-serif;
+        font-family: 'Roboto', sans-serif;*/
+        font-family: 'Josefin Sans', sans-serif;   
+        font-size: 110%;         
+    }
+
+    .poem h1, .poem h2, .poem h3, .poem, .poem h5 {
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .prose-poem {
+        text-align:justify;
+        width:520px;  
+        word-wrap:hyphenate;
+        display: inline-block;     
+    }
+
+    .poem-serif-manuale {
+        font-family: 'Josefin Sans', sans-serif;   
+        font-size: larger;         
+    }
+
+    .poem-serif-manuale h1, .poem-serif-manuale h2, .poem-serif-manuale h3, .poem-serif-manuale, .poem-serif-manuale h5 {
+        font-family: 'Manuale', serif;
+    }
+
+    .prose-poem {
+        width:510px;
+        word-wrap:break-word;
+        display:inline-block;
+        text-align:justify;
+    }
+
+    .stanza {padding-left:30px;}
+    .line {text-indent:-30px;}
+
+    .tooltip {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 16px;
+    }
+
+    .tooltip-inner {
+        background-color: #0C67f9;
+        color: #FFFFFF;
+    }
+
+    .popover-title {
+        font-family: 'Josefin Sans', sans-serif;
+        background-color: #FFFFFF;
+        color: #0C67f9;
+    }
+
+    .popover-content {
+        font-family: 'Josefin Sans', sans-serif;
+        background-color: #0C67f9;
+        color: #FFFFFF;
+        padding: 25px;
+    }
+
+    .container-poem {
+        background-color:#ffffe6;
+    }

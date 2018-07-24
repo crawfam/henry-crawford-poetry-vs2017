@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<title>The Sentence</title>
+
+    <!-- Google Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu+Condensed" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" />
+
+    <!-- Bootstrap inclusion  -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous" />
+
+    <!-- Files needed for popover and tooltips MUST BE REFERENCED BEFORE BOOTSTRAP.MIN.JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <style>
+        body {
+            /*font-family: 'Sedgwick Ave Display', cursive;*/
+            /*font-family: 'Ubuntu Condensed', sans-serif;*/
+            /*font-family: 'Roboto', sans-serif;*/
+            font-family: 'Josefin Sans', sans-serif;
+            background-color: #FFFFFF;
+        }
+
+        .heading-footer-strip {
+            background-color: #ffffff;
+            font-family: 'Josefin Sans', sans-serif;
+            color: #ffffff;
+            padding-left: 30px;
+        }
+
+        .stanza {
+            padding-left: 30px;
+        }
+
+        .line {
+            text-indent: -30px;
+        }
+
+        .tooltip {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 16px;
+        }
+
+        .tooltip-inner {
+            background-color: #0C67f9;
+            color: #FFFFFF;
+        }
+
+        .popover-title {
+            font-family: 'Josefin Sans', sans-serif;
+            background-color: #FFFFFF;
+            color: #0C67f9;
+        }
+
+        .popover-content {
+            font-family: 'Josefin Sans', sans-serif;
+            background-color: #0C67f9;
+            color: #FFFFFF;
+            padding: 25px;
+        }
+
+        .container-fluid {
+            background-color: #ffffff;
+        }
+
+        .poem h1, h2, h3, h4 {
+            color: #000000;
+        }
+    </style>
+	
+</head>
+
+<!-- https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-fluid-layout.php -->
+
+<body>
+
+    <nav class="navbar heading-footer-strip">
+
+        <div>
+            <h4><a id="home-link" href="index.html#">American Software 2.0</a> </h4>
+        </div>
+
+    </nav>
+
+    <div id="poem_the_sentence" class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-md-5 col-md-offset-1  text-nowrap ">
+                <h2>The Sentence</h2>
+                Every day my mother's <a href="#" onclick="textToggle('#s1');">boyfriend</a><span id="s1" style="display:none;"> comes home drunk and </span> smashes up our only TV.<br />
+                Every day my mother's <a href="#" onclick="textToggle('#s2');">boyfriend</a><span id="s2" style="display:none;"> falls down the stairs and </span> smashes up our only TV.<br />
+                Every day my mother's <a href="#" onclick="textToggle('#s3');">boyfriend</a><span id="s3" style="display:none;"> forgets we're only kids and </span> smashes up our only TV.<br />
+                Every day my mother's <a href="#" onclick="textToggle('#s4');">boyfriend</a><span id="s4" style="display:none;"> remembers his dad's leather belt and </span> smashes up our only TV.<br />
+                Every day my mother's <a href="#" onclick="textToggle('#s5');">boyfriend</a><span id="s5" style="display:none;"> sees his dad coming home and  </span> smashes up our only TV.<br />
+                Every day my mother's <a href="#" onclick="textToggle('#s6');">boyfriend</a><span id="s6" style="display:none;"> gets a helpless feeling and </span> smashes up our only TV.<br />
+                Every day my mother's <a href="#" onclick="textToggle('#s7');">boyfriend</a><span id="s7" style="display:none;"> comes to work with me and </span> smashes up our only TV.<br />
+                Every day my mother's <a href="#" onclick="textToggle('#s8');">boyfriend</a><span id="s8" style="display:none;"> sees me editing a spreadsheet and </span> smashes up our only TV.<br />
+                Every day my mother's <a href="#" onclick="textToggle('#s9');">boyfriend</a><span id="s9" style="display:none;"> is sitting in the conference room and </span> smashes up our only TV.<br />
+                Every day my mother's <a href="#" onclick="textToggle('#s10');">boyfriend</a><span id="s10" style="display:none;"> meets with my boss and </span> smashes up our only TV.<br />
+                Every day my mother's <a href="#" onclick="textToggle('#s11');">boyfriend</a><span id="s11" style="display:none;"> finally gets what he did and </span> smashes up our only TV.<br />
+                Every day my mother's <a href="#" onclick="textToggle('#s12');">boyfriend</a><span id="s12" style="display:none;"> lets go of my arm and </span> smashes up our only TV.<br />
+                Every day my mother's <a href="#" onclick="textToggle('#s13');">boyfriend</a><span id="s13" style="display:none;"> leaves his things behind and </span> smashes up our only TV.<br />
+                Every day my mother's <a href="#" onclick="textToggle('#s14');">boyfriend</a><span id="s14" style="display:none;"> drifts to the outskirts of town and </span> smashes up our only TV.<br />
+                Every day my mother's <a href="#" onclick="textToggle('#s15');">boyfriend</a><span id="s15" style="display:none;"> becomes harder to recall and </span> smashes up our only TV.<br />
+                Every day my mother's <a href="#" onclick="textToggle('#s16');">boyfriend</a><span id="s16" style="display:none;"> is almost entirely forgotten and </span> smashes up our only TV.<br />
+                Every day my mother's <a href="#" onclick="textToggle('#s17');">boyfriend</a><span id="s17" style="display:none;"> settles into the past and </span> smashes up our only TV.<br />
+                Every day my mother's <a href="#" onclick="textToggle('#s18');">boyfriend</a><span id="s18" style="display:none;"> is there waiting for me and </span> smashes up our only TV.<br />
+                <br />
+                <br />
+            </div>            
+        </div>                
+        <footer class="navbar-default navbar-fixed-bottom">
+            <div class="row heading-footer-strip">
+                <div>
+                    <h4>&copy; Copyright 2017 Henry Crawford</h4>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+
+        $(document).ready(function () {
+            $("[data-toggle='tooltip']").tooltip();
+            $('[data-toggle="popover"]').popover();            
+        });
+
+        // needed only for The Sentence
+        function textToggle(id)
+        {
+            $(id).toggle("slow");
+        }
+
+        
+    </script>
+
+</body>
+
+</html>

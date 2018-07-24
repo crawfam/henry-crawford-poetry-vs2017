@@ -1,0 +1,158 @@
+﻿@model Models.SestinaModel
+
+@{
+    ViewBag.Title = "Sestinaville";
+}
+
+@section AdditionalMetatags
+{
+    <meta property="og:url" content="http://henrycrawfordpoetry.com/Tools/Sestina" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sestinaville" />
+    <meta property="og:description" content="a tool for writing sestina poems" />
+    <meta property="og:image" content="http://henrycrawfordpoetry.com/Images/Website/SestinaVille.png" />
+}
+   
+
+<section class="sct-color-1 slice">
+
+    <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-3">
+
+                        <div class="section-title-wrapper style-1 v1">
+                            <h3 class="section-title left">
+                                <span>Sestinaville <small style=" text-transform: lowercase">a tool for writing sestina poems</small></span>
+                            </h3> 
+                        </div>
+
+
+                @using (Html.BeginForm("CreateSestina", "Tools"))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+        
+
+                        <div class="form-group">
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.Title)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.Title)                    
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.LineEnding1)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.LineEnding1)<br />
+                                @Html.ValidationMessageFor(model => model.LineEnding1)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.LineEnding2)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.LineEnding2)<br />
+                                @Html.ValidationMessageFor(model => model.LineEnding2)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.LineEnding3)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.LineEnding3)<br />
+                                @Html.ValidationMessageFor(model => model.LineEnding3)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.LineEnding4)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.LineEnding4)<br />
+                                @Html.ValidationMessageFor(model => model.LineEnding4)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.LineEnding5)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.LineEnding5)<br />
+                                @Html.ValidationMessageFor(model => model.LineEnding5)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.LineEnding6)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.LineEnding6)<br />
+                                @Html.ValidationMessageFor(model => model.LineEnding6)
+                            </div>
+                        </div>
+
+                    <br />
+                    <p>
+                        <button type="submit" class="btn btn-base-1">Create Sestina</button>            
+                    </p>
+    
+                }
+        
+                </div>        
+    
+                <div class="col-md-6">
+
+                        <div class="block block-image v2 mb-40">
+                            <div class="block-image">                                        
+                                <img src="~/Images/Website/SestinaVille.png" alt="Sestinaville" />
+                            </div>
+                        </div>
+                
+                        <br />                
+                        <p><b>The sestina</b> form is well defined and centers around making a poem of six stanzas each of which consists of six lines. The form dictates that each line end with one of six words that are used throughout the poem. The order of lines in each stanza follows a pattern that can be described algorithmically. So, the first stanza sets the initial order of ending words in lines 1, 2, 3, 4, 5, and 6. The second stanza reorders them as 6, 1, 5, 2, 4, and 3, and this process continues as follows:</p>
+                        1, 2, 3, 4, 5, 6, <br />
+                        6, 1, 5, 2, 4, 3, <br />
+                        3, 6, 4, 1, 2, 5, <br />
+                        5, 3, 2, 6, 1, 4, <br />
+                        4, 5, 1, 3, 6, 2, <br />
+                        2, 4, 6, 5, 3, 1 <br />
+                        <br />
+                        <p>What Sestinaville allows you to do is concentrate on getting just the six evocative words you need for your poem. You can then enter these words into the form on the webpage as they would appear in the first stanza.: A (line 1), B (line 2), C (line 3), D (line 4), E (line 5) F (line 6). Sestinavile will then write your chosen words into six dummy stanzas that end with the appropriate words. It’s up to you to write the actual lines, but the work of ordering the line endings has been done for you.</p>
+                        <p>But that’s not the end of it. After the six stanzas comes the envoi. This is a three line structure that uses all six of the selected words. There are several ways of writing the enovi and the literature suggests a certain freedom here. Sestinaville uses an enovi form as follows:</p>
+                        (A) F, (B) E, (C) D <br />
+                        or<br />
+                        1  6,   2  5,   3  4
+                        <br /><br />
+                        <p>After you have entered your words in the webpage form (and all six words are required), just hit the button at the bottom of the form. You’ll be prompted to download a text file containing your sestina template. Feel free to do so as many times a you’d like. You can change words and try difference combinations. When you get a text file that you like, just copy it into Word and get to writing the meat of the sestina.</p>
+
+                
+                        <ul class="inline-links">
+                            <li><a target="_blank" href="http://classicalpoets.org/how-to-write-a-sestina-with-examples/">How to write a sestina with examples</a></li>
+                            <li><a target="_blank" href="https://en.wikipedia.org/wiki/Sestina">Wikipedia: Sestina</a></li>                        
+                        </ul>                
+
+            </div> <!-- .col-md-6 -->
+
+        </div> <!-- .row-->
+
+    </div> <!-- .container -->
+
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
