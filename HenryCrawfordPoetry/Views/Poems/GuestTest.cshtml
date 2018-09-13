@@ -1,409 +1,425 @@
 ﻿@{
-    ViewBag.Title = "GuestTest";
+    ViewBag.Title = "TEST Guest Artists";
 }
 
 @section AdditionalMetatags
 {
-    <meta property="og:url" content="http://henrycrawfordpoetry.com/GuestTest/" />
+    @*<meta property="og:url" content="http://henrycrawfordpoetry.com/GuestArtists/" />*@
+    <meta property="og:url" content="http://henrycrawfordpoetry.com/Poems/GuestTest/" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Luther Jett" />
-    <meta property="og:description" content="Migrations from Our Situation" />
-    <meta property="og:image" content="http://henrycrawfordpoetry.com/Images/Poems/luther_jett_migrations.jpg" />
+    <meta property="og:title" content="Pamela Murray Winters" />
+    <meta property="og:description" content="Two Texas Folk Films" />
+    <meta property="og:image" content="http://henrycrawfordpoetry.com/Images/Poems/pamela_murray_winters_two_texas_folk_films.jpg" />
 }
 
-    <!-- SECTION -->
-    <!-- SECTION -->
-    <section class="sct-color-1 slice">
-        <div class="container">
-
-                <div class="row">               
-
-                    <div class="col-md-9">
-
-                        <h2 id="luther_jett">Luther Jett</h2>
-
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-                                <img src="~/Images/Poems/luther_jett_migrations.jpg" alt="Migrations" />
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    Migrations<br /><small>From Our Situation</small>
-                                </h3>
-                                <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="luther_jett_migrations.html"})">Migrations</a>
-                            </div>
-                        </div>
-
-
-                        <h2 id="donald_illich">Donald Illich</h2>
-
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-                                <img src="~/Images/Poems/donald_illich_worsening_the_situation.jpg" alt="Worsening the Situation" />
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    Worsening the Situation<br /><small>From Chance Bodies</small>
-                                </h3>
-                                <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="donald_illich_worsening_the_situation.html"})">Worsening the Situation</a>
-                            </div>
-                        </div>
-
-
-                        <h2 id="david_keplinger">David Keplinger</h2>
-
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-                                <img src="~/Images/Poems/david_keplinger_the_city_of_birth.jpg" alt="The City of Birth" />
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    The City of Birth<br /><small>From Another City</small>
-                                </h3>
-                                <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="david_keplinger_the_city_of_birth.html"})">The City of Birth</a>
-                            </div>
-                        </div>
-
-
-                        <h2 id="margaret_mackinnon">Margaret Mackinnon</h2>
-
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-                                <img src="~/Images/Poems/margaret_mackinnon_myrtle_beach_1959.jpg" alt="Myrtle Beach, 1959" />
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    Myrtle Beach, 1959<br /><small>Margaret Mackinnon</small>
-                                </h3>
-                                <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="margaret_mackinnon_myrtle_beach_1959.html"})">Myrtle Beach, 1959</a>
-                            </div>
-                        </div>
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-                                <img src="~/Images/Poems/henry_crawford_as_you_clicked_on_that_hard_drive_snapshot.jpg" alt="as you clicked [on that hard drive snapshot]" />
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    as you clicked [on that hard drive snapshot]<br /><small>Henry Crawford</small>
-                                </h3>
-                                @Html.ActionLink("as you clicked [on that hard drive snapshot]", "Poem", "Poems", new { fileName = "henry_crawford_as_you_clicked_on_that_hard_drive_snapshot.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
-                            </div>
-                        </div>
-
-                        <h2 id="susan_okie">Susan Okie</h2>
-
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-                                <img src="~/Images/Poems/prayer_in_the_winter_desert.png" alt="Prayer in the Winter Desert" />
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    Prayer in the Winter Desert<br /><small>Susan Okie</small>
-                                </h3>
-                                <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="susan_okie_prayer_in_the_winter_desert.html"})">Prayer in the Winter Desert</a>
-                            </div>
-                        </div>
-
-                        <h2 id="betsy_holleman">Betsy Holleman</h2>
-
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-                                <img src="~/Images/Poems/my_thoughts_and_prayers_are_with_you.png" alt="my thoughts and prayers are with you" />
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    My Thoughts and Prayers Are With You<br /><small>Betsy Holleman</small>
-                                </h3>
-                                <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="betsy_holleman_my_thoughts_and_prayers_are_with_you.html"})">My Thoughts and Prayers Are With You</a>
-                            </div>
-                        </div>
-
-
-                        <h2 id="martin_shapiro">Martin Shapiro</h2>
-
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-                                <img src="~/Images/Poems/open_city_pittsburgh.jpg" alt="Open City Pittsburgh" />
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    Open City: Pittsburgh<br /><small>Martin Shapiro</small>
-                                </h3>
-                                <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="martin_shapiro_open_city_pittsburgh.html"})">Open City: Pittsburgh</a>
-                            </div>
-                        </div>
-
-                        <h2 id="roni_fuller">Roni Fuller</h2>
-
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-                                <img src="~/Images/Poems/help.png" alt="Help" />
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    Help<br /><small>Roni Fuller</small>
-                                </h3>
-                                <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="roni_fuller_help.html"})">Help</a>
-                            </div>
-                        </div>
-
-
-
-                        <h2 id="majda_gama">Majda Gama</h2>
-
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-                                <img src="~/Images/Poems/sunglasses.png" alt="Three Poems" />
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    Three Poems<br /><small>Majda Gama & Henry Crawford</small>
-                                </h3>
-                                <p>
-                                    Poet colleague Majda Gama shared three of her wonderful poems with me. She also suggested three of mine from <i>American Software</i> for comparision. So here they are side-by-side on the page.
-                                </p>
-
-                                <ul class="inline-meta">
-                                    <li><a href="@Url.Action("PoemTwo", "Poems", new {fileName1="majda_gama_the_stars_fall_on_alabama.html", fileName2="henry_crawford_st_ike_of_the_illuminated_highways.html"})">The Stars Fall on Alabama + St. Ike of the Illuminated Highways</a></li>
-                                </ul>
-
-                                <ul class="inline-meta">
-                                    <li><a href="@Url.Action("PoemTwo", "Poems", new {fileName1="majda_gama_p_street_beach_elegy.html", fileName2="henry_crawford_east_of_manhattan.html"})">P Street Beach Elegy + East of Manhattan</a></li>
-                                </ul>
-
-                                <ul class="inline-meta">
-                                    <li><a href="@Url.Action("PoemTwo", "Poems", new {fileName1="majda_gama_germs_burns.html", fileName2="henry_crawford_kurt_cobain_1994.html"})">Germs Burns + Kurt Cobain [1994]</a></li>
-                                </ul>
-
-                            </div>
-                        </div>
-                        <h2 id="ann_philips">Ann Philips</h2>
-
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-                                <img src="~/Images/Poems/how_we_fall_asleep.png" alt="How We Fall Asleep" />
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    How we Fall Asleep<br /><small>Ann Philips</small>
-                                </h3>
-                                <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="ann_philips_how_we_fall_asleep.html"})">How we Fall Asleep</a>
-                            </div>
-                        </div>
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-                                <img src="~/Images/Poems/four_small_stories.png" alt="Four Small Stories" />
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    Four Small Stories<br /><small>Henry Crawford</small>
-                                </h3>
-                                @Html.ActionLink("Four Small Stories", "Poem", "Poems", new { fileName = "henry_crawford_four_small_stories.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
-                            </div>
-                        </div>
-
-                        <h2 id="bill_yarrow">Bill Yarrow</h2>
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-                                <img src="~/Images/Poems/vig_of_love.jpg" alt="The Vig of Love" />
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    The Vig of Love<br /><small>Bill Yarrow</small>
-                                </h3>
-                                <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="bill_yarrow_the_vig_of_love.html"})">THe Vig of Love</a>
-                            </div>
-                        </div>
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-                                <img src="~/Images/Poems/Sonnet_44.jpg" alt="Sonnet 44 Crime Scene" />
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    Sonnet 44 [Fragments of a Graphic Novel]<br /><small>Henry Crawford</small>
-                                </h3>
-                                @Html.ActionLink("Sonnet 44 [Fragments of a Graphic Novel]", "Poem", "Poems", new { fileName = "henry_crawford_sonnet_44_[fragments_of_a_graphic_novel].html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
-                            </div>
-                        </div>
-                        <h2 id="judith_bowles">Judith Bowles</h2>
-
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-                                <img src="~/Images/Poems/santa_barbara.jpg" alt="Santa Barbara, CA" />
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    Santa Barbara Morning<br /><small>Judith Bowles</small>
-                                </h3>
-                                <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="judith_bowles_santa_barbara_morning.html"})">Santa Barbara Morning</a>
-                            </div>
-                        </div>
-
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-                                <img src="~/Images/Poems/santa_clara_server_room.png" alt="Black Computer Keyboard" />
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    Santa Clara Server Room<br /><small>Henry Crawford</small>
-                                </h3>
-                                @Html.ActionLink("Santa Clara Server Room", "Poem", "Poems", new { fileName = "henry_crawford_santa_clara_server_room.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
-                            </div>
-                        </div>
-
-                        <h2 id="kim_roberts">Kim Roberts</h2>
-
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-                                <img src="~/Images/Poems/lyndon_johlnson_talking.jpg" alt="Lyndon Johnson Talking" />
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    Rondeau Beginning with a Quote<br />from Lyndon Baines Johnson<br /><small>Kim Roberts</small>
-                                </h3>
-                                <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="kim_roberts_rondeau_beginning_with_a_quote_from_lyndon_baines_johnson.html"})">Rondeau Beginning with a Quote<br />from Lyndon Baines Johnson</a>
-                            </div>
-                        </div>
-
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-                                <img src="~/Images/Poems/lyndon_johnson_desk.jpg" alt="Lyndon Johnson Desk" />
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    Lyndon Johnson<br /><small>Henry Crawford</small>
-                                </h3>
-                                @Html.ActionLink("Lyndon Johnson", "Poem", "Poems", new { fileName = "henry_crawford_lyndon_johnson.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
-                            </div>
-                        </div>
-
-                        <h2 id="ellen_sazzman">Ellen Sazzman</h2>
-
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-                                <img src="~/Images/poems/hawk_and_dove.jpg" alt="The Hawk and Dove" />
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    Hawk and Dove<br /><small>Ellen Sazzman</small>
-                                </h3>
-                                @Html.ActionLink("Hawk and Dove", "Poem", "Poems", new { fileName = "ellen_sazzman_hawk_and_dove.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
-                            </div>
-                        </div>
-
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-                                <img src="~/Images/Poems/off_hours.jpg" alt="The Letter O" />
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    Off Hours<br /><small>Henry Crawford</small>
-                                </h3>
-                                @Html.ActionLink("Off Hours", "Poem", "Poems", new { fileName = "henry_crawford_off_hours.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
-                            </div>
-                        </div>
-
-
-                        <h2 id="rocky-delaplaine">Rocky Delaplaine</h2>
-
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-                                <img src="~/Images/Poems/letter_o.jpg" alt="The Letter O" />
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    The Letter O<br /><small>Rocky Delaplaine</small>
-                                </h3>
-                                @Html.ActionLink("The Letter O", "Poem", "Poems", new { fileName = "letter_o.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
-                            </div>
-                        </div>
-
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-
-                                <img src="~/Images/Poems/tightrope_family.jpg" alt="Tightrope family" />
-
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    Raised in a Tightrope Walking Family<br /><small>Henry Crawford</small>
-                                </h3>
-                                @Html.ActionLink("Raised in a Tightrope Walking Family", "Poem", "Poems", new { fileName = "tightrope_walking_family.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
-                            </div>
-                        </div>
-
-                        <span class="clearfix mt-20"></span>
-
-                        <hr />
-
-                        <h2 id="jason-gebhardt">Jason Gebhardt</h2>
-
-                        <div class="block block-image v3 mb-40">
-
-                            <div class="block-image">
-                                <img src="~/Images/Poems/jfk_to_lax.jpg" alt="Airport Waiting" />
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    JFK to LAX<br /><small>Jason Gebhardt</small>
-                                </h3>
-                                @Html.ActionLink("JFK to LAX", "Poem", "Poems", new { fileName = "JFK_to_LAX.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
-                            </div>
-                        </div>
-
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-
-                                <img src="~/Images/Poems/Leaving_by_Air.jpg" alt="Seat Belt Warning" />
-
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    Leaving by Air<br /><small>Henry Crawford</small>
-                                </h3>
-                                @Html.ActionLink("Leaving by Air", "Poem", "Poems", new { fileName = "Leaving_by_Air.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
-                            </div>
-                        </div>
-
-                        <span class="clearfix mt-20"></span>
-
-                        <hr />
-
-                        <h2 id="renee-gherity">Renee Gherity</h2>
-
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-                                <img src="~/Images/Poems/gettysburg_july_1_1863.jpg" alt="" />
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    Gettysburg, July 1, 1863<br /><small>Renee Gherity</small>
-                                </h3>
-                                @Html.ActionLink("Gettysburg, July 1, 1863", "Poem", "Poems", new { fileName = "gettysburg_july_1_1863.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
-                            </div>
-                        </div>
-
-                        <div class="block block-image v3 mb-40">
-                            <div class="block-image">
-
-                                <img src="~/Images/Poems/one_afternoon_in_the_american_civil_war.jpg" alt="American Civil War Cannon" />
-
-                            </div>
-                            <div class="block-content">
-                                <h3 class="block-title">
-                                    One Afternoon In The American Civil War<br /><small>Henry Crawford</small>
-                                </h3>
-                                @Html.ActionLink("One Afternoon In The American Civil War", "Poem", "Poems", new { fileName = "one_afternoon_in_the_american_civl_war.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
-                            </div>
-                        </div>
-
-                        <span class="clearfix mt-20"></span>
-
-                    </div> <!-- col-md-9 --> 
-
-                <div class="col-md-2">
-                   <!-- SIDEBAR -->
-                    <div class="sidebar">
+<!-- SECTION -->
+<!-- SECTION -->
+<section class="sct-color-1 slice">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-9">
+
+                <h2 id="pamela_murray_winters">Pamela Murray Winters</h2>
+
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">                       
+                        <img src="~/Images/Poems/pamela_murray_winters_two_texas_folk_films.jpg" alt="Two Texas Folk Films" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            Two Texas Folk Films<br /><small>From The Unbeckonable Bird</small>
+                        </h3>
+                        <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="pamela_murray_winters_two_texas_folk_films.html"})">Two Texas Folk Films</a>
+                    </div>
+                </div>
+
+
+                <h2 id="luther_jett">Luther Jett</h2>
+
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+                        <img src="~/Images/Poems/luther_jett_migrations.jpg" alt="Migrations" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            Migrations<br /><small>From Our Situation</small>
+                        </h3>
+                        <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="luther_jett_migrations.html"})">Migrations</a>
+                    </div>
+                </div>
+
+
+                <h2 id="donald_illich">Donald Illich</h2>
+
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+                        <img src="~/Images/Poems/donald_illich_worsening_the_situation.jpg" alt="Worsening the Situation" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            Worsening the Situation<br /><small>From Chance Bodies</small>
+                        </h3>
+                        <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="donald_illich_worsening_the_situation.html"})">Worsening the Situation</a>
+                    </div>
+                </div>
+
+
+                <h2 id="david_keplinger">David Keplinger</h2>
+
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+                        <img src="~/Images/Poems/david_keplinger_the_city_of_birth.jpg" alt="The City of Birth" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            The City of Birth<br /><small>From Another City</small>
+                        </h3>
+                        <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="david_keplinger_the_city_of_birth.html"})">The City of Birth</a>
+                    </div>
+                </div>
+
+
+                <h2 id="margaret_mackinnon">Margaret Mackinnon</h2>
+
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+                        <img src="~/Images/Poems/margaret_mackinnon_myrtle_beach_1959.jpg" alt="Myrtle Beach, 1959" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            Myrtle Beach, 1959<br /><small>Margaret Mackinnon</small>
+                        </h3>
+                        <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="margaret_mackinnon_myrtle_beach_1959.html"})">Myrtle Beach, 1959</a>
+                    </div>
+                </div>
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+                        <img src="~/Images/Poems/henry_crawford_as_you_clicked_on_that_hard_drive_snapshot.jpg" alt="as you clicked [on that hard drive snapshot]" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            as you clicked [on that hard drive snapshot]<br /><small>Henry Crawford</small>
+                        </h3>
+                        @Html.ActionLink("as you clicked [on that hard drive snapshot]", "Poem", "Poems", new { fileName = "henry_crawford_as_you_clicked_on_that_hard_drive_snapshot.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
+                    </div>
+                </div>
+
+                <h2 id="susan_okie">Susan Okie</h2>
+
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+                        <img src="~/Images/Poems/prayer_in_the_winter_desert.png" alt="Prayer in the Winter Desert" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            Prayer in the Winter Desert<br /><small>Susan Okie</small>
+                        </h3>
+                        <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="susan_okie_prayer_in_the_winter_desert.html"})">Prayer in the Winter Desert</a>
+                    </div>
+                </div>
+
+                <h2 id="betsy_holleman">Betsy Holleman</h2>
+
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+                        <img src="~/Images/Poems/my_thoughts_and_prayers_are_with_you.png" alt="my thoughts and prayers are with you" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            My Thoughts and Prayers Are With You<br /><small>Betsy Holleman</small>
+                        </h3>
+                        <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="betsy_holleman_my_thoughts_and_prayers_are_with_you.html"})">My Thoughts and Prayers Are With You</a>
+                    </div>
+                </div>
+
+
+                <h2 id="martin_shapiro">Martin Shapiro</h2>
+
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+                        <img src="~/Images/Poems/open_city_pittsburgh.jpg" alt="Open City Pittsburgh" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            Open City: Pittsburgh<br /><small>Martin Shapiro</small>
+                        </h3>
+                        <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="martin_shapiro_open_city_pittsburgh.html"})">Open City: Pittsburgh</a>
+                    </div>
+                </div>
+
+                <h2 id="roni_fuller">Roni Fuller</h2>
+
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+                        <img src="~/Images/Poems/help.png" alt="Help" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            Help<br /><small>Roni Fuller</small>
+                        </h3>
+                        <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="roni_fuller_help.html"})">Help</a>
+                    </div>
+                </div>
+
+
+
+                <h2 id="majda_gama">Majda Gama</h2>
+
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+                        <img src="~/Images/Poems/sunglasses.png" alt="Three Poems" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            Three Poems<br /><small>Majda Gama & Henry Crawford</small>
+                        </h3>
+                        <p>
+                            Poet colleague Majda Gama shared three of her wonderful poems with me. She also suggested three of mine from <i>American Software</i> for comparision. So here they are side-by-side on the page.
+                        </p>
+
+                        <ul class="inline-meta">
+                            <li><a href="@Url.Action("PoemTwo", "Poems", new {fileName1="majda_gama_the_stars_fall_on_alabama.html", fileName2="henry_crawford_st_ike_of_the_illuminated_highways.html"})">The Stars Fall on Alabama + St. Ike of the Illuminated Highways</a></li>
+                        </ul>
+
+                        <ul class="inline-meta">
+                            <li><a href="@Url.Action("PoemTwo", "Poems", new {fileName1="majda_gama_p_street_beach_elegy.html", fileName2="henry_crawford_east_of_manhattan.html"})">P Street Beach Elegy + East of Manhattan</a></li>
+                        </ul>
+
+                        <ul class="inline-meta">
+                            <li><a href="@Url.Action("PoemTwo", "Poems", new {fileName1="majda_gama_germs_burns.html", fileName2="henry_crawford_kurt_cobain_1994.html"})">Germs Burns + Kurt Cobain [1994]</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <h2 id="ann_philips">Ann Philips</h2>
+
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+                        <img src="~/Images/Poems/how_we_fall_asleep.png" alt="How We Fall Asleep" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            How we Fall Asleep<br /><small>Ann Philips</small>
+                        </h3>
+                        <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="ann_philips_how_we_fall_asleep.html"})">How we Fall Asleep</a>
+                    </div>
+                </div>
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+                        <img src="~/Images/Poems/four_small_stories.png" alt="Four Small Stories" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            Four Small Stories<br /><small>Henry Crawford</small>
+                        </h3>
+                        @Html.ActionLink("Four Small Stories", "Poem", "Poems", new { fileName = "henry_crawford_four_small_stories.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
+                    </div>
+                </div>
+
+                <h2 id="bill_yarrow">Bill Yarrow</h2>
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+                        <img src="~/Images/Poems/vig_of_love.jpg" alt="The Vig of Love" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            The Vig of Love<br /><small>Bill Yarrow</small>
+                        </h3>
+                        <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="bill_yarrow_the_vig_of_love.html"})">THe Vig of Love</a>
+                    </div>
+                </div>
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+                        <img src="~/Images/Poems/Sonnet_44.jpg" alt="Sonnet 44 Crime Scene" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            Sonnet 44 [Fragments of a Graphic Novel]<br /><small>Henry Crawford</small>
+                        </h3>
+                        @Html.ActionLink("Sonnet 44 [Fragments of a Graphic Novel]", "Poem", "Poems", new { fileName = "henry_crawford_sonnet_44_[fragments_of_a_graphic_novel].html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
+                    </div>
+                </div>
+                <h2 id="judith_bowles">Judith Bowles</h2>
+
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+                        <img src="~/Images/Poems/santa_barbara.jpg" alt="Santa Barbara, CA" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            Santa Barbara Morning<br /><small>Judith Bowles</small>
+                        </h3>
+                        <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="judith_bowles_santa_barbara_morning.html"})">Santa Barbara Morning</a>
+                    </div>
+                </div>
+
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+                        <img src="~/Images/Poems/santa_clara_server_room.png" alt="Black Computer Keyboard" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            Santa Clara Server Room<br /><small>Henry Crawford</small>
+                        </h3>
+                        @Html.ActionLink("Santa Clara Server Room", "Poem", "Poems", new { fileName = "henry_crawford_santa_clara_server_room.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
+                    </div>
+                </div>
+
+                <h2 id="kim_roberts">Kim Roberts</h2>
+
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+                        <img src="~/Images/Poems/lyndon_johlnson_talking.jpg" alt="Lyndon Johnson Talking" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            Rondeau Beginning with a Quote<br />from Lyndon Baines Johnson<br /><small>Kim Roberts</small>
+                        </h3>
+                        <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="kim_roberts_rondeau_beginning_with_a_quote_from_lyndon_baines_johnson.html"})">Rondeau Beginning with a Quote<br />from Lyndon Baines Johnson</a>
+                    </div>
+                </div>
+
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+                        <img src="~/Images/Poems/lyndon_johnson_desk.jpg" alt="Lyndon Johnson Desk" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            Lyndon Johnson<br /><small>Henry Crawford</small>
+                        </h3>
+                        @Html.ActionLink("Lyndon Johnson", "Poem", "Poems", new { fileName = "henry_crawford_lyndon_johnson.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
+                    </div>
+                </div>
+
+                <h2 id="ellen_sazzman">Ellen Sazzman</h2>
+
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+                        <img src="~/Images/poems/hawk_and_dove.jpg" alt="The Hawk and Dove" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            Hawk and Dove<br /><small>Ellen Sazzman</small>
+                        </h3>
+                        @Html.ActionLink("Hawk and Dove", "Poem", "Poems", new { fileName = "ellen_sazzman_hawk_and_dove.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
+                    </div>
+                </div>
+
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+                        <img src="~/Images/Poems/off_hours.jpg" alt="The Letter O" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            Off Hours<br /><small>Henry Crawford</small>
+                        </h3>
+                        @Html.ActionLink("Off Hours", "Poem", "Poems", new { fileName = "henry_crawford_off_hours.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
+                    </div>
+                </div>
+
+
+                <h2 id="rocky-delaplaine">Rocky Delaplaine</h2>
+
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+                        <img src="~/Images/Poems/letter_o.jpg" alt="The Letter O" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            The Letter O<br /><small>Rocky Delaplaine</small>
+                        </h3>
+                        @Html.ActionLink("The Letter O", "Poem", "Poems", new { fileName = "letter_o.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
+                    </div>
+                </div>
+
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+
+                        <img src="~/Images/Poems/tightrope_family.jpg" alt="Tightrope family" />
+
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            Raised in a Tightrope Walking Family<br /><small>Henry Crawford</small>
+                        </h3>
+                        @Html.ActionLink("Raised in a Tightrope Walking Family", "Poem", "Poems", new { fileName = "tightrope_walking_family.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
+                    </div>
+                </div>
+
+                <span class="clearfix mt-20"></span>
+
+                <hr />
+
+                <h2 id="jason-gebhardt">Jason Gebhardt</h2>
+
+                <div class="block block-image v3 mb-40">
+
+                    <div class="block-image">
+                        <img src="~/Images/Poems/jfk_to_lax.jpg" alt="Airport Waiting" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            JFK to LAX<br /><small>Jason Gebhardt</small>
+                        </h3>
+                        @Html.ActionLink("JFK to LAX", "Poem", "Poems", new { fileName = "JFK_to_LAX.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
+                    </div>
+                </div>
+
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+
+                        <img src="~/Images/Poems/Leaving_by_Air.jpg" alt="Seat Belt Warning" />
+
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            Leaving by Air<br /><small>Henry Crawford</small>
+                        </h3>
+                        @Html.ActionLink("Leaving by Air", "Poem", "Poems", new { fileName = "Leaving_by_Air.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
+                    </div>
+                </div>
+
+                <span class="clearfix mt-20"></span>
+
+                <hr />
+
+                <h2 id="renee-gherity">Renee Gherity</h2>
+
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+                        <img src="~/Images/Poems/gettysburg_july_1_1863.jpg" alt="" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            Gettysburg, July 1, 1863<br /><small>Renee Gherity</small>
+                        </h3>
+                        @Html.ActionLink("Gettysburg, July 1, 1863", "Poem", "Poems", new { fileName = "gettysburg_july_1_1863.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
+                    </div>
+                </div>
+
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+
+                        <img src="~/Images/Poems/one_afternoon_in_the_american_civil_war.jpg" alt="American Civil War Cannon" />
+
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            One Afternoon In The American Civil War<br /><small>Henry Crawford</small>
+                        </h3>
+                        @Html.ActionLink("One Afternoon In The American Civil War", "Poem", "Poems", new { fileName = "one_afternoon_in_the_american_civl_war.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15" })
+                    </div>
+                </div>
+
+                <span class="clearfix mt-20"></span>
+
+            </div> <!-- col-md-9 -->
+
+            <div class="col-md-2">
+                <!-- SIDEBAR -->
+                <div class="sidebar">
                     <!-- SIDEBAR OBJECT 1 -->
                     <div class="sidebar-object">
                         <br /><br />
@@ -413,6 +429,12 @@
                             </h3>
                         </div>
                         <ul class="list-image">
+                            <li>
+                                <img src="~/Images/Poems/luther_jett_migrations.jpg" alt="Luther Jett" />
+                                <p>
+                                    <a href="#luther_jett">Luther Jett</a>
+                                </p>
+                            </li>
                             <li>
                                 <img src="~/Images/Poems/donald_illich_worsening_the_situation.jpg" alt="Donald Illich" />
                                 <p>
@@ -509,13 +531,12 @@
                                     <a href="#renee-gherity">Renee Gherity</a>
                                 </p>
                             </li>
-                        </ul>   
+                        </ul>
                     </div>
 
-                    </div>  <!-- sidebar  -->
-                </div> <!-- col-md-3 -->
+                </div>  <!-- sidebar  -->
+            </div> <!-- col-md-3 -->
 
-            </div> <!-- row --> 
-        </div> <!-- page container --> 
-    </section> <!--page section sct-color-1 slice -->
-
+        </div> <!-- row -->
+    </div> <!-- page container -->
+</section> <!--page section sct-color-1 slice -->
