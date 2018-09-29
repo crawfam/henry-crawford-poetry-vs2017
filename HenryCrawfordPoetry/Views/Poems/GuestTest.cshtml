@@ -7,9 +7,9 @@
     @*<meta property="og:url" content="http://henrycrawfordpoetry.com/GuestArtists/" />*@
     <meta property="og:url" content="http://henrycrawfordpoetry.com/Poems/GuestTest/" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Pamela Murray Winters" />
-    <meta property="og:description" content="Two Texas Folk Films" />
-    <meta property="og:image" content="http://henrycrawfordpoetry.com/Images/Poems/pamela_murray_winters_two_texas_folk_films.jpg" />
+    <meta property="og:title" content="Karren LaLonde Alenier" />
+    <meta property="og:description" content="Control" />
+    <meta property="og:image" content="http://henrycrawfordpoetry.com/Images/Poems/karren_lalonde_alenier_control.jpg" />
 }
 
 <!-- SECTION -->
@@ -21,10 +21,24 @@
 
             <div class="col-md-9">
 
+                <h2 id="karren_lalonde_alenier">Karren LaLonde Alenier</h2>
+
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+                        <img src="~/Images/Poems/karren_lalonde_alenier_control.jpg" alt="control" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            Control<br /><small>From The Anima of Paul Bowles</small>
+                        </h3>
+                        <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="karren_lalonde_alenier_control.html"})">Control</a>
+                    </div>
+                </div>
+
                 <h2 id="pamela_murray_winters">Pamela Murray Winters</h2>
 
                 <div class="block block-image v3 mb-40">
-                    <div class="block-image">                       
+                    <div class="block-image">
                         <img src="~/Images/Poems/pamela_murray_winters_two_texas_folk_films.jpg" alt="Two Texas Folk Films" />
                     </div>
                     <div class="block-content">
@@ -540,3 +554,16 @@
         </div> <!-- row -->
     </div> <!-- page container -->
 </section> <!--page section sct-color-1 slice -->
+
+@section Scripts {
+
+    <script>
+
+        $(document).ready(function () {
+            $("[data-toggle='tooltip']").tooltip();
+            $('[data-toggle="popover"]').popover();
+        });
+    
+    </script>
+
+}
