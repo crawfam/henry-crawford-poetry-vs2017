@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using Models;
+using System;
 using System.Text;
-using Models;
+using System.Web.Mvc;
 
 namespace HenryCrawfordPoetry.Controllers
 {
@@ -206,6 +203,13 @@ namespace HenryCrawfordPoetry.Controllers
 
             // If we got this far, something failed, redisplay form
             return View("Villanelle", vm);
+        }
+
+        [AllowAnonymous]
+        public ActionResult ManuscriptTemplates()
+        {
+            ViewBag.Message = "Manuscript Templates";
+            return View();
         }
 
 
