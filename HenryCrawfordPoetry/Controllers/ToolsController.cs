@@ -205,6 +205,22 @@ namespace HenryCrawfordPoetry.Controllers
             return View("Villanelle", vm);
         }
 
+                     
+        [AllowAnonymous]
+        public ActionResult Pantoum()
+        {
+            ViewBag.Message = "Your Pantoum Page.";
+
+            PantoumModel vm = new PantoumModel();
+            vm.Title = "";
+
+            return View(vm);
+
+        }
+
+
+
+
         [AllowAnonymous]
         public ActionResult ManuscriptTemplates()
         {
