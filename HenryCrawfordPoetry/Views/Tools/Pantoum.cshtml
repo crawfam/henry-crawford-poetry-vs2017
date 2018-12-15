@@ -8,7 +8,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Pantoum Paradise" />
     <meta property="og:description" content="A tool for writing pantoum poems" />
-    <meta property="og:image" content="http://henrycrawfordpoetry.com/Images/Website/VillanelleVillageLogoMd.jpg" />
+    <meta property="og:image" content="http://henrycrawfordpoetry.com/Images/Website/Pantoum_Paradise.jpg" />
 }
 <section class="sct-color-1 slice">
 
@@ -17,14 +17,14 @@
 
             <div class="col-md-9">
                 <div class="alert alert-info">
-                    <strong>Welcome to Villanelle Village.</strong> The Villanelle is a challenging poetic form. There are five tercets followed by one quatrain. The initial tercet sets up two repeating refrains in the first and third lines of the poem. These are repeated in alternating stanzas and repeat for a final time as the last two lines of the poem.
+                    <strong>Welcome to Pantoum Paradise.</strong> Anything worth saying is worth saying twice. The Pantoum presents the challenge of reputation according to a pretty strict mathematical form made up of a series of quatrains. In all but the first quatrain, the first line is a repetition of the second line of the preceding quatrain while the third line repeats the last or fourth line of the preceding quatrain. This pattern can go on for as many quatrains as the poet desires. However, the last quatrain must look back to the first quatrain and use the third line of the first quatrain as the second line of the last quatrain and the first line of the poem as the last line of the final quatrain and, hence, the last line of the poem.
                     <br /><br />
-                    This tool lets you work with each of the 19 lines that make up the stanzas. The first stanza is the most important since it sets up the two repeating refrains. Hit the "Set" button for each line to automatically set the text for the applicable lines. In the case of the first line, the last word of that line will be inserted as hints into the lines which must rhyme with that word. Similarly, setting the second line will fill all applicable lines with the last word of that line as a hint. Of course, lines can be changed and new rhymes can be added as needed. When you are done, hit Create Villanelle and you will get a downloadable text document which you can use as a template by copying it into your regular writing word processor.
+                    This tool presents a helpful template to get started with a five quatrain pantoum. Fill the lines in using the textboxes on the left which will automatically populate the pantoum you are creating on the right. Enter the lines by clicking on the “set” button next to each line. Start with the first four lines and then add new lines until the pantoum is filled. The “clear” button will clear all instance of a line so you can make a new one. You can clear the entire pantoum with the “Clear All” button. When you’re done, click the “Create Pantoum” button and the poem will be saved to a text file for subsequent copying into Word or other editor.
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="listing-image">
-                    <img width="325" src="~/Images/Website/VillanelleVillageLogoSm.jpg" alt="Villanelle Village Logo" />
+                    <img width="325" src="~/Images/Website/Pantoum_Paradise.jpg" alt="Pantoum Paradise Logo" />
                 </div>
             </div>
 
@@ -35,13 +35,15 @@
 
                 <form method="POST" action="CreatePantoum">
 
-                    <div class="row">
+                    <div class="row">                   
 
-                        <div class="form-group form-inline">
-                            <label for="Title">Title</label>
-                            <input type="text" style="width:400px" class="form-control" id="Title" name="Title" value="@Model.Title" placeholder="Title">
+                        <div class="row">
+                            <div class="col-md-4">&nbsp;</div>
+                            <div class="form-group form-inline">
+                                <label for="Title">Title</label>
+                                <input type="text" style="width:400px" class="form-control" id="Title" name="Title" value="@Model.Title" placeholder="Title">
+                            </div>
                         </div>
-
 
                         <div class="col-md-7">
                             <div class="section-title-wrapper style-1 v1">
@@ -55,62 +57,76 @@
                                 <label for="Line1">Line 1</label>
                                 <input type="text" style="width:400px" class="form-control" id="Line1" name="Line1" value="@Model.Line1" placeholder="Line 1 of 1st Quatrain + Line 4 of 5th Quatrain">
                                 <button type="button" onclick="setPantoumLine(document.getElementById('Line1').value, 1);" class="btn btn-base-1">Set</button>
-                                <button type="button" onclick="clearPantoumLine();" class="btn btn-base-1">Clr</button>
+                                <button type="button" onclick="clearPantoumLine(1);" class="btn btn-base-1">Clr</button>
                             </div>
                             <div class="form-group form-inline">
                                 <label for="Line2">Line 2</label>
                                 <input type="text" style="width:400px" class="form-control" id="Line2" name="Line2" value="@Model.Line2" placeholder="Line 2 of 1st Quatrain + 1st line of 2nd Quatrain">
                                 <button type="button" onclick="setPantoumLine(document.getElementById('Line2').value, 2);" class="btn btn-base-1">Set</button>
-                                <button type="button" onclick="clearPantoumLine();" class="btn btn-base-1">Clr</button>
+                                <button type="button" onclick="clearPantoumLine(2);" class="btn btn-base-1">Clr</button>
                             </div>
                             <div class="form-group form-inline">
                                 <label for="Line3">Line 3</label>
                                 <input type="text" style="width:400px" class="form-control" id="Line3" name="Line3" value="@Model.Line3" placeholder="Line 3 of 1st Quatrain + 2nd line of 5th Quatrain">
                                 <button type="button" onclick="setPantoumLine(document.getElementById('Line3').value, 3);" class="btn btn-base-1">Set</button>
-                                <button type="button" onclick="clearPantoumLine();" class="btn btn-base-1">Clr</button>
+                                <button type="button" onclick="clearPantoumLine(3);" class="btn btn-base-1">Clr</button>
                             </div>
                             <div class="form-group form-inline">
                                 <label for="Line4">Line 4</label>
                                 <input type="text" style="width:400px" class="form-control" id="Line4" name="Line4" value="@Model.Line4" placeholder="Line 4 of 1st Quatrain + 3rd line of 2nd Quatrain">
                                 <button type="button" onclick="setPantoumLine(document.getElementById('Line4').value, 4);" class="btn btn-base-1">Set</button>
-                                <button type="button" onclick="clearPantoumLine();" class="btn btn-base-1">Clr</button>
+                                <button type="button" onclick="clearPantoumLine(4);" class="btn btn-base-1">Clr</button>
                             </div>
                             <div class="form-group form-inline">
                                 <label for="Line5">Line 5</label>
                                 <input type="text" style="width:400px" class="form-control" id="Line5" name="Line5" value="@Model.Line5" placeholder="Line 2 of 2nd Quatrain + 1st line of 3rd Quatrain">
                                 <button type="button" onclick="setPantoumLine(document.getElementById('Line5').value, 5);" class="btn btn-base-1">Set</button>
-                                <button type="button" onclick="clearPantoumLine();" class="btn btn-base-1">Clr</button>
+                                <button type="button" onclick="clearPantoumLine(5);" class="btn btn-base-1">Clr</button>
                             </div>
                             <div class="form-group form-inline">
                                 <label for="Line6">Line 6</label>
                                 <input type="text" style="width:400px" class="form-control" id="Line6" name="Line6" value="@Model.Line6" placeholder="Line 4 of 2nd Quatrain + 3rd line of 3rd Quatrain">
                                 <button type="button" onclick="setPantoumLine(document.getElementById('Line6').value, 6);" class="btn btn-base-1">Set</button>
-                                <button type="button" onclick="clearPantoumLine();" class="btn btn-base-1">Clr</button>
+                                <button type="button" onclick="clearPantoumLine(6);" class="btn btn-base-1">Clr</button>
                             </div>
                             <div class="form-group form-inline">
                                 <label for="Line7">Line 7</label>
                                 <input type="text" style="width:400px" class="form-control" id="Line7" name="Line7" value="@Model.Line7" placeholder="Line 2 of 3nd Quatrain + 1st line of 4th Quatrain">
                                 <button type="button" onclick="setPantoumLine(document.getElementById('Line7').value, 7);" class="btn btn-base-1">Set</button>
-                                <button type="button" onclick="clearPantoumLine();" class="btn btn-base-1">Clr</button>
+                                <button type="button" onclick="clearPantoumLine(7);" class="btn btn-base-1">Clr</button>
                             </div>
                             <div class="form-group form-inline">
                                 <label for="Line8">Line 8</label>
                                 <input type="text" style="width:400px" class="form-control" id="Line8" name="Line8" value="@Model.Line8" placeholder="Line 4 of 3rd Quatrain + 3rd line of 4th Quatrain">
                                 <button type="button" onclick="setPantoumLine(document.getElementById('Line8').value, 8);" class="btn btn-base-1">Set</button>
-                                <button type="button" onclick="clearPantoumLine();" class="btn btn-base-1">Clr</button>
+                                <button type="button" onclick="clearPantoumLine(8);" class="btn btn-base-1">Clr</button>
                             </div>
                             <div class="form-group form-inline">
                                 <label for="Line9">Line 9</label>
                                 <input type="text" style="width:400px" class="form-control" id="Line9" name="Line9" value="@Model.Line9" placeholder="Line 2 of 4th Quatrain + 1st line of 5th Quatrain">
                                 <button type="button" onclick="setPantoumLine(document.getElementById('Line9').value, 9);" class="btn btn-base-1">Set</button>
-                                <button type="button" onclick="clearPantoumLine();" class="btn btn-base-1">Clr</button>
+                                <button type="button" onclick="clearPantoumLine(9);" class="btn btn-base-1">Clr</button>
                             </div>
-                            <div class="form-group form-inline">
+                            <div class="form-group form-inline" style="margin-left:-8px">
                                 <label for="Line10">Line 10</label>
                                 <input type="text" style="width:400px" class="form-control" id="Line10" name="Line10" value="@Model.Line10" placeholder="Line 4 of 4th Quatrain + 3rd line of 5th Quatrain">
                                 <button type="button" onclick="setPantoumLine(document.getElementById('Line10').value, 10);" class="btn btn-base-1">Set</button>
-                                <button type="button" onclick="clearPantoumLine();" class="btn btn-base-1">Clr</button>
+                                <button type="button" onclick="clearPantoumLine(10);" class="btn btn-base-1">Clr</button>
                             </div>
+                            <br />
+                            <div class="section-title-wrapper style-1 v1">
+                                <h3 class="section-title section-title-sm left">
+                                    <span>Links</span>
+                                </h3>
+                            </div>
+                            <ul class="list-style-1 v2">
+                                <li><a target="_blank" href="https://en.wikipedia.org/wiki/Pantoum">Wikipedia</a></li>
+                                <li><a target="_blank" href="https://www.poets.org/poetsorg/text/pantoum-poetic-form">Academy of American Poets</a></li>
+                                <li><a target="_blank" href="http://www.baymoon.com/~ariadne/form/pantoum.htm">A Helpful Explanation</a></li>
+                            </ul>
+
+
+
                         </div>
                         <div class="col-md-5">
                             <div class="section-title-wrapper style-1 v1">
@@ -199,6 +215,7 @@
                             <div class="form-group form-inline">
                                 <div class="col-sm-offset-2 col-sm-10">
                                     <button type="submit" class="btn btn-base-1">Create Pantoum</button>
+                                    <button type="button" onclick="if (confirm('Are you sure you want to clear out your pantoum?')) clearAll(); return false;" class="btn btn-danger">Clear All</button>
                                 </div>
                             </div>
 
@@ -221,8 +238,7 @@
     <script>
 
         function setPantoumLine(str, num)
-        {
-            //alert(str + " " + num);
+        {            
 
             switch (num) {
                 case 1:
@@ -243,7 +259,7 @@
                     break;
                 case 5:
                     $("#PLine6").val(str);
-                    $("#PLine8").val(str);
+                    $("#PLine9").val(str);
                     break;
                 case 6:
                     $("#PLine8").val(str);
@@ -258,10 +274,6 @@
                     $("#PLine15").val(str);
                     break;
                 case 9:
-                    $("#PLine8").val(str);
-                    $("#PLine11").val(str);
-                    break;
-                case 9:
                     $("#PLine14").val(str);
                     $("#PLine17").val(str);
                     break;
@@ -271,16 +283,96 @@
                     break;
             }
 
-
-
-
-
         }
 
-        function clearPantoumLine()
-        {
-            alert('clear');
+        function clearPantoumLine(num) {
+            switch (num) {
+                case 1:
+                    $("#Line1").val("");
+                    $("#PLine1").val("");
+                    $("#PLine20").val("");
+                    break;
+                case 2:
+                    $("#Line2").val("");
+                    $("#PLine2").val("");
+                    $("#PLine5").val("");
+                    break;
+                case 3:
+                    $("#Line3").val("");
+                    $("#PLine3").val("");
+                    $("#PLine18").val("");
+                    break;
+                case 4:
+                    $("#Line4").val("");
+                    $("#PLine4").val("");
+                    $("#PLine7").val("");
+                    break;
+                case 5:
+                    $("#Line5").val("");
+                    $("#PLine6").val("");
+                    $("#PLine9").val("");
+                    break;
+                case 6:
+                    $("#Line6").val("");
+                    $("#PLine8").val("");
+                    $("#PLine11").val("");
+                    break;
+                case 7:
+                    $("#Line7").val("");
+                    $("#PLine10").val("");
+                    $("#PLine13").val("");
+                    break;
+                case 8:
+                    $("#Line8").val("");
+                    $("#PLine12").val("");
+                    $("#PLine15").val("");
+                    break;
+                case 9:
+                    $("#Line9").val("");
+                    $("#PLine14").val("");
+                    $("#PLine17").val("");
+                    break;
+                case 10:
+                    $("#Line10").val("");
+                    $("#PLine16").val("");
+                    $("#PLine19").val("");
+                    break;
+            }
         }
+
+        function clearAll() {
+            $("#Line1").val("");
+            $("#PLine1").val("");
+            $("#PLine20").val("");
+            $("#Line2").val("");
+            $("#PLine2").val("");
+            $("#PLine5").val("");
+            $("#Line3").val("");
+            $("#PLine3").val("");
+            $("#PLine18").val("");
+            $("#Line4").val("");
+            $("#PLine4").val("");
+            $("#PLine7").val("");
+            $("#Line5").val("");
+            $("#PLine6").val("");
+            $("#PLine9").val("");
+            $("#Line6").val("");
+            $("#PLine8").val("");
+            $("#PLine11").val("");
+            $("#Line7").val("");
+            $("#PLine10").val("");
+            $("#PLine13").val("");
+            $("#Line8").val("");
+            $("#PLine12").val("");
+            $("#PLine15").val("");
+            $("#Line9").val("");
+            $("#PLine14").val("");
+            $("#PLine17").val("");
+            $("#Line10").val("");
+            $("#PLine16").val("");
+            $("#PLine19").val("");
+        }
+
 
     </script>
 
