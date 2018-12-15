@@ -1,9 +1,7 @@
 ﻿@model Models.PantoumModel
-
 @{
     ViewBag.Title = "Pantoum Paradise";
 }
-
 @section AdditionalMetatags
 {
     <meta property="og:url" content="http://henrycrawfordpoetry.com/Tools/Pantoum" />
@@ -12,105 +10,173 @@
     <meta property="og:description" content="A tool for writing pantoum poems" />
     <meta property="og:image" content="http://henrycrawfordpoetry.com/Images/Website/VillanelleVillageLogoMd.jpg" />
 }
-
 <section class="sct-color-1 slice">
-    
-    <div class="container">
-        <div class="row">           
 
+    <div class="container">
+        <div class="row">
 
             <div class="col-md-9">
-
-            <div class="alert alert-info">
-                <strong>Welcome to Villanelle Village.</strong> The Villanelle is a challenging poetic form. There are five tercets followed by one quatrain. The initial tercet sets up two repeating refrains in the first and third lines of the poem. These are repeated in alternating stanzas and repeat for a final time as the last two lines of the poem.
-                <br /><br />
-                This tool lets you work with each of the 19 lines that make up the stanzas. The first stanza is the most important since it sets up the two repeating refrains. Hit the "Set" button for each line to automatically set the text for the applicable lines. In the case of the first line, the last word of that line will be inserted as hints into the lines which must rhyme with that word. Similarly, setting the second line will fill all applicable lines with the last word of that line as a hint. Of course, lines can be changed and new rhymes can be added as needed. When you are done, hit Create Villanelle and you will get a downloadable text document which you can use as a template by copying it into your regular writing word processor. 
+                <div class="alert alert-info">
+                    <strong>Welcome to Villanelle Village.</strong> The Villanelle is a challenging poetic form. There are five tercets followed by one quatrain. The initial tercet sets up two repeating refrains in the first and third lines of the poem. These are repeated in alternating stanzas and repeat for a final time as the last two lines of the poem.
+                    <br /><br />
+                    This tool lets you work with each of the 19 lines that make up the stanzas. The first stanza is the most important since it sets up the two repeating refrains. Hit the "Set" button for each line to automatically set the text for the applicable lines. In the case of the first line, the last word of that line will be inserted as hints into the lines which must rhyme with that word. Similarly, setting the second line will fill all applicable lines with the last word of that line as a hint. Of course, lines can be changed and new rhymes can be added as needed. When you are done, hit Create Villanelle and you will get a downloadable text document which you can use as a template by copying it into your regular writing word processor.
+                </div>
             </div>
-
-            </div>
-
-           <div class="col-md-3">
-                 <div class="listing-image">
+            <div class="col-md-3">
+                <div class="listing-image">
                     <img width="325" src="~/Images/Website/VillanelleVillageLogoSm.jpg" alt="Villanelle Village Logo" />
-                 </div>
+                </div>
             </div>
-
 
         </div>
-
         <div class="col-md-12">
             <div>
-                <!-- Forms -->
+                <!-- Form -->
 
-                <div class="row">
-                    <div class="col-md-7">
-                        <div class="section-title-wrapper style-1 v1">
-                            <h3 class="section-title section-title-sm left">
-                                <span>Write Your Pantoum</span>
-                            </h3>
+                <form method="POST" action="CreatePantoum">
+
+                    <div class="row">
+
+                        <div class="form-group form-inline">
+                            <label for="Title">Title</label>
+                            <input type="text" style="width:400px" class="form-control" id="Title" name="Title" value="@Model.Title" placeholder="Title">
                         </div>
 
-                    <form method="POST" action="CreatePantoum" >
-                            
-                            <div class="form-group form-inline">
-                                <label for="Title">Pantoum Title</label>
-                                <br />
-                                <input type="text" style="width:400px" class="form-control" id="Title" name="Title" value="@Model.Title" placeholder="Title">
+
+                        <div class="col-md-7">
+                            <div class="section-title-wrapper style-1 v1">
+                                <h3 class="section-title section-title-sm left">
+                                    <span>Write Pantoum Lines</span>
+                                </h3>
                             </div>
 
-                            <hr />
-                                                
+
                             <div class="form-group form-inline">
-                                <label for="Line1">Line 1</label>                                
-                                <input type="text" style="width:400px" class="form-control" id="Line1" name="Line1" value="@Model.Line1" placeholder="Line 1 (Refrain One, Repeating Rhyme A)">
+                                <label for="Line1">Line 1</label>
+                                <input type="text" style="width:400px" class="form-control" id="Line1" name="Line1" value="@Model.Line1" placeholder="Line 1 of 1st Quatrain + Line 4 of 5th Quatrain">
                             </div>
                             <div class="form-group form-inline">
                                 <label for="Line2">Line 2</label>
-                                <input type="text" style="width:400px" class="form-control" id="Line2" name="Line2" value="@Model.Line2" placeholder="Line Two (Repeating Rhyme B)">
+                                <input type="text" style="width:400px" class="form-control" id="Line2" name="Line2" value="@Model.Line2" placeholder="Line 2 of 1st Quatrain + 1st line of 2nd Quatrain">
                             </div>
                             <div class="form-group form-inline">
                                 <label for="Line3">Line 3</label>
-                                <input type="text" style="width:400px" class="form-control" id="Line3" name="Line3" value="@Model.Line3" placeholder="Line Three (Refrain Two, Repeating Rhyme A)">
+                                <input type="text" style="width:400px" class="form-control" id="Line3" name="Line3" value="@Model.Line3" placeholder="Line 3 of 1st Quatrain + 2nd line of 5th Quatrain">
                             </div>
-
                             <div class="form-group form-inline">
-                                <label for="Line4">Line 4</label>                             
-                                <input type="text" style="width:400px" class="form-control" id="Line4" name="Line4" value="@Model.Line4" placeholder="Line Four (Rhyme A")>
+                                <label for="Line4">Line 4</label>
+                                <input type="text" style="width:400px" class="form-control" id="Line4" name="Line4" value="@Model.Line4" placeholder="Line 4 of 1st Quatrain + 3rd line of 2nd Quatrain">
                             </div>
-
                             <div class="form-group form-inline">
                                 <label for="Line5">Line 5</label>
-                                <input type="text" style="width:400px" class="form-control" id="Line5" name="Line5" value="@Model.Line5" placeholder="Line Five (Rhyme B")>
+                                <input type="text" style="width:400px" class="form-control" id="Line5" name="Line5" value="@Model.Line5" placeholder="Line 2 of 2nd Quatrain + 1st line of 3rd Quatrain">
                             </div>
-
                             <div class="form-group form-inline">
                                 <label for="Line6">Line 6</label>
-                                <input type="text" style="width:400px" class="form-control" id="Line6" name="Line6" value="@Model.Line6" placeholder="Line Six (Refrain One)">
-                                <button type="button" onclick="getRhyme(document.getElementById('Line6').value);" class="btn btn-base-1">Find Rhyme</button>
+                                <input type="text" style="width:400px" class="form-control" id="Line6" name="Line6" value="@Model.Line6" placeholder="Line 4 of 2nd Quatrain + 3rd line of 3rd Quatrain">
+                                <button type="button" onclick="setPantoumLine(document.getElementById('Line6').value);" class="btn btn-base-1">Set</button>
+                                <button type="button" onclick="clearPantoumLine();" class="btn btn-base-1">Clr</button>
                             </div>
-
                             <div class="form-group form-inline">
                                 <label for="Line7">Line 7</label>
-                                <input type="text" style="width:400px" class="form-control" id="Line7" name="Line7" value="@Model.Line7" placeholder="Line Seven (Rhyme A)">
+                                <input type="text" style="width:400px" class="form-control" id="Line7" name="Line7" value="@Model.Line7" placeholder="Line 2 of 3nd Quatrain + 1st line of 4th Quatrain">
                             </div>
-
                             <div class="form-group form-inline">
                                 <label for="Line8">Line 8</label>
-                                <input type="text" style="width:400px" class="form-control" id="Line8" name="Line8" value="@Model.Line8" placeholder="Line Eight (Rhyme B)">
+                                <input type="text" style="width:400px" class="form-control" id="Line8" name="Line8" value="@Model.Line8" placeholder="Line 4 of 3rd Quatrain + 3rd line of 4th Quatrain">
                             </div>
-
                             <div class="form-group form-inline">
                                 <label for="Line9">Line 9</label>
-                                <input type="text" style="width:400px" class="form-control" id="Line9" name="Line9" value="@Model.Line9" placeholder="Line Nine (Refrain Two)">
+                                <input type="text" style="width:400px" class="form-control" id="Line9" name="Line9" value="@Model.Line9" placeholder="Line 2 of 4th Quatrain + 1st line of 5th Quatrain">
                             </div>
-
                             <div class="form-group form-inline">
                                 <label for="Line10">Line 10</label>
-                                <input type="text" style="width:400px" class="form-control" id="Line10" name="Line10" value="@Model.Line10" placeholder="Line Ten (Rhyme A)">
+                                <input type="text" style="width:400px" class="form-control" id="Line10" name="Line10" value="@Model.Line10" placeholder="Line 4 of 4th Quatrain + 3rd line of 5th Quatrain">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="section-title-wrapper style-1 v1">
+                                <h3 class="section-title section-title-sm left">
+                                    <span>Pantoum</span>
+                                </h3>
                             </div>
 
-                            
-                            <hr />
+                            <div class="">
+                                <input type="text" style="width:400px" class="form-control" id="PLine1" name="PLine1" value="@Model.PLine1" placeholder="Quatrain 1">
+                            </div>
+                            <div class="">
+                                <input type="text" style="width:400px" class="form-control" id="PLine2" name="PLine2" value="@Model.PLine2" placeholder="Quatrain 1">
+                            </div>
+                            <div class="">
+                                <input type="text" style="width:400px" class="form-control" id="PLine3" name="PLine3" value="@Model.PLine3" placeholder="Quatrain 1">
+                            </div>
+                            <div class="">
+                                <input type="text" style="width:400px" class="form-control" id="PLine4" name="PLine4" value="@Model.PLine4" placeholder="Quatrain 1">
+                            </div>
+
+                            <br />
+
+
+                            <div class="">
+                                <input type="text" style="width:400px" class="form-control" id="PLine5" name="PLine5" value="@Model.PLine5" placeholder="Quatrain 2">
+                            </div>
+                            <div class="">
+                                <input type="text" style="width:400px" class="form-control" id="PLine6" name="PLine6" value="@Model.PLine6" placeholder="Quatrain 2">
+                            </div>
+                            <div class="">
+                                <input type="text" style="width:400px" class="form-control" id="PLine7" name="PLine7" value="@Model.PLine7" placeholder="Quatrain 2">
+                            </div>
+                            <div class="">
+                                <input type="text" style="width:400px" class="form-control" id="PLine8" name="PLine8" value="@Model.PLine8" placeholder="Quatrain 2">
+                            </div>
+
+                            <br />
+
+                            <div class="">
+                                <input type="text" style="width:400px" class="form-control" id="PLine9" name="PLine9" value="@Model.PLine9" placeholder="Quatrain 3">
+                            </div>
+                            <div class="">
+                                <input type="text" style="width:400px" class="form-control" id="PLine10" name="PLine10" value="@Model.PLine10" placeholder="Quatrain 3">
+                            </div>
+
+                            <div class="">
+                                <input type="text" style="width:400px" class="form-control" id="PLine11" name="PLine11" value="@Model.PLine11" placeholder="Quatrain 3">
+                            </div>
+                            <div class="">
+                                <input type="text" style="width:400px" class="form-control" id="PLine12" name="PLine12" value="@Model.PLine12" placeholder="Quatrain 3">
+                            </div>
+
+                            <br />
+
+                            <div class="">
+                                <input type="text" style="width:400px" class="form-control" id="PLine13" name="PLine13" value="@Model.PLine13" placeholder="Quatrain 4">
+                            </div>
+                            <div class="">
+                                <input type="text" style="width:400px" class="form-control" id="PLine14" name="PLine14" value="@Model.PLine14" placeholder="Quatrain 4">
+                            </div>
+                            <div class="">
+                                <input type="text" style="width:400px" class="form-control" id="PLine15" name="PLine15" value="@Model.PLine15" placeholder="Quatrain 4">
+                            </div>
+                            <div class="">
+                                <input type="text" style="width:400px" class="form-control" id="PLine16" name="PLine16" value="@Model.PLine16" placeholder="Quatrain 4">
+                            </div>
+
+                            <br />
+
+                            <div class="">
+                                <input type="text" style="width:400px" class="form-control" id="PLine17" name="PLine17" value="@Model.PLine17" placeholder="Quatrain 5">
+                            </div>
+                            <div class="">
+                                <input type="text" style="width:400px" class="form-control" id="PLine18" name="PLine18" value="@Model.PLine18" placeholder="Quatrain 5">
+                            </div>
+                            <div class="">
+                                <input type="text" style="width:400px" class="form-control" id="PLine19" name="PLine19" value="@Model.PLine19" placeholder="Quatrain 5">
+                            </div>
+                            <div class="">
+                                <input type="text" style="width:400px" class="form-control" id="PLine20" name="PLine20" value="@Model.PLine20" placeholder="Quatrain 5">
+                            </div>
+
+                            <br />
 
                             <div class="form-group form-inline">
                                 <div class="col-sm-offset-2 col-sm-10">
@@ -118,92 +184,33 @@
                                 </div>
                             </div>
 
-                    </form>
-
-                    </div>
-
-                    <div class="col-md-2">
-
-                        <div class="section-title-wrapper style-1 v1">
-                            <h3 class="section-title section-title-sm left">
-                                <span>Rhymes</span>
-                            </h3>
                         </div>
 
-                        <div class="col">
+                    </div> <!-- .row -->
 
-                        <ul style="list-style-type:none; padding:0; margin:15px;" id="wordList"></ul>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-3">
-
-                        <div class="section-title-wrapper style-1 v1">
-                            <h3 class="section-title section-title-sm left">
-                                <span>Links</span>
-                            </h3>
-                        </div>
-
-                        <ul class="list-style-1 v2">
-                            <li><a target="_blank" href="https://en.wikipedia.org/wiki/Villanelle">Wikipedia</a></li>
-                            <li><a target="_blank" href="https://www.wikihow.com/Write-a-Villanelle">Wikihow</a></li>
-                            <li><a target="_blank" href="https://www.poets.org/poetsorg/text/villanelle-poetic-form">Academy of American Poets</a></li>
-                            <li><a target="_blank" href="http://www.webexhibits.org/poetry/explore_classic_villanelle_examples.html">Villanelle Examples</a></li>                                        
-                            <li><a target="_blank" href="http://www.writing-world.com/poetry/villanelle.shtml">Writing-World Poetic Forms</a></li>
-                        </ul>
-
-                        <br /><br />
-
-@*                        <form method="POST" action="GetVillanelle">
-
-                         <div class="section-title-wrapper style-1 v1">
-                            <h3 class="section-title section-title-sm left">
-                                <span>Load-a-Poem</span>
-                            </h3>
-                        </div>
-
-                            <p>Select a poem from below and load it into the program using the Load button.</p>
-                                                      
-
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Do Not Go Gentle (Dylan Thomas)
-                            </label><br />
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> One Art (Elizabeth Bishop)
-                            </label><br />
-                            <label class="radio-inline">
-                                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> Mad Girl’s Love Song (Sylvia Plath)
-                            </label>
-
-                            <br /><br />
-
-                           <div class="form-group form-inline">
-                                <div class="col-sm-offset-2 col-sm-10">
-                                    <button type="submit" class="btn btn-base-1">Load the Poem</button>
-                                </div>
-                            </div>
-
-                        </form>*@
-
-
-
-                    </div>
-
-
-                </div>
+                </form>
 
             </div>
-
             <br />
-            
+
         </div>
     </div>
-
 </section>
 
+
 @section Scripts {
+
+    <script>
+
+        //function clearPantoumLine()
+        //{
+        //    alert('clear');
+        //}
+
+
+    </script>
+
+
     @Scripts.Render("~/bundles/jqueryval")
     <script src="~/Scripts/custom.js"></script>
 }

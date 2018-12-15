@@ -218,6 +218,86 @@ namespace HenryCrawfordPoetry.Controllers
 
         }
 
+        // CreatePantoum
+        [HttpPost]
+        [AllowAnonymous]
+        public ActionResult CreatePantoum(PantoumModel pm)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.Append(pm.Title);
+            sb.Append(Environment.NewLine);
+            sb.Append(Environment.NewLine);
+
+            sb.Append(pm.PLine1);
+            sb.Append(Environment.NewLine);
+            sb.Append(pm.PLine2);
+            sb.Append(Environment.NewLine);
+            sb.Append(pm.PLine3);
+            sb.Append(Environment.NewLine);
+            sb.Append(pm.PLine4);
+
+            sb.Append(Environment.NewLine);
+            sb.Append(Environment.NewLine);
+
+            sb.Append(pm.PLine5);
+            sb.Append(Environment.NewLine);
+            sb.Append(pm.PLine6);
+            sb.Append(Environment.NewLine);
+            sb.Append(pm.PLine7);
+            sb.Append(Environment.NewLine);
+            sb.Append(pm.PLine8);
+
+            sb.Append(Environment.NewLine);
+            sb.Append(Environment.NewLine);
+
+
+            sb.Append(pm.PLine9);
+            sb.Append(Environment.NewLine);
+            sb.Append(pm.PLine10);
+            sb.Append(Environment.NewLine);
+            sb.Append(pm.PLine11);
+            sb.Append(Environment.NewLine);
+            sb.Append(pm.PLine12);
+
+            sb.Append(Environment.NewLine);
+            sb.Append(Environment.NewLine);
+
+            sb.Append(pm.PLine13);
+            sb.Append(Environment.NewLine);
+            sb.Append(pm.PLine14);
+            sb.Append(Environment.NewLine);
+            sb.Append(pm.PLine15);
+            sb.Append(Environment.NewLine);
+            sb.Append(pm.PLine16);
+
+            sb.Append(Environment.NewLine);
+            sb.Append(Environment.NewLine);
+
+            sb.Append(pm.PLine17);
+            sb.Append(Environment.NewLine);
+            sb.Append(pm.PLine18);
+            sb.Append(Environment.NewLine);
+            sb.Append(pm.PLine19);
+            sb.Append(Environment.NewLine);
+            sb.Append(pm.PLine20);
+
+
+            string text = sb.ToString();
+
+            Response.Clear();
+            Response.ClearHeaders();
+
+            Response.AppendHeader("Content-Length", text.Length.ToString());
+            Response.ContentType = "text/plain";
+            Response.AppendHeader("Content-Disposition", "attachment;filename=\"pantoum_template.txt\"");
+
+            Response.Write(text);
+            Response.End();
+
+            // If we got this far, something failed, redisplay form
+            return View("Pantoum", pm);
+        }
 
 
 
