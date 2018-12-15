@@ -87,3 +87,148 @@ function setLines(word, lineType) {
     }
 
 }
+
+
+//////////////////////////////////////////// PANTOUM FUNCTIONS ////////////////////////////////////////////
+function setPantoumLine(str, num)
+{            
+
+    switch (num)
+    {
+        case 1:
+            $("#PLine1").val(str);
+            $("#PLine20").val(str);
+            break;
+        case 2:
+            $("#PLine2").val(str);
+            $("#PLine5").val(str);
+            break;
+        case 3:
+            $("#PLine3").val(str);
+            $("#PLine18").val(str);
+            break;
+        case 4:
+            $("#PLine4").val(str);
+            $("#PLine7").val(str);
+            break;
+        case 5:
+            $("#PLine6").val(str);
+            $("#PLine9").val(str);
+            break;
+        case 6:
+            $("#PLine8").val(str);
+            $("#PLine11").val(str);
+            break;
+        case 7:
+            $("#PLine10").val(str);
+            $("#PLine13").val(str);
+            break;
+        case 8:
+            $("#PLine12").val(str);
+            $("#PLine15").val(str);
+            break;
+        case 9:
+            $("#PLine14").val(str);
+            $("#PLine17").val(str);
+            break;
+        case 10:
+            $("#PLine16").val(str);
+            $("#PLine19").val(str);
+            break;
+    }
+
+}
+
+function clearPantoumLine(num) {
+
+    switch (num)
+    {
+        case 1:
+            $("#Line1").val("");
+            $("#PLine1").val("");
+            $("#PLine20").val("");
+            break;
+        case 2:
+            $("#Line2").val("");
+            $("#PLine2").val("");
+            $("#PLine5").val("");
+            break;
+        case 3:
+            $("#Line3").val("");
+            $("#PLine3").val("");
+            $("#PLine18").val("");
+            break;
+        case 4:
+            $("#Line4").val("");
+            $("#PLine4").val("");
+            $("#PLine7").val("");
+            break;
+        case 5:
+            $("#Line5").val("");
+            $("#PLine6").val("");
+            $("#PLine9").val("");
+            break;
+        case 6:
+            $("#Line6").val("");
+            $("#PLine8").val("");
+            $("#PLine11").val("");
+            break;
+        case 7:
+            $("#Line7").val("");
+            $("#PLine10").val("");
+            $("#PLine13").val("");
+            break;
+        case 8:
+            $("#Line8").val("");
+            $("#PLine12").val("");
+            $("#PLine15").val("");
+            break;
+        case 9:
+            $("#Line9").val("");
+            $("#PLine14").val("");
+            $("#PLine17").val("");
+            break;
+        case 10:
+            $("#Line10").val("");
+            $("#PLine16").val("");
+            $("#PLine19").val("");
+            break;
+    }
+}
+
+function clearAll()
+{
+    $("#Line1").val("");
+    $("#PLine1").val("");
+    $("#PLine20").val("");
+    $("#Line2").val("");
+    $("#PLine2").val("");
+    $("#PLine5").val("");
+    $("#Line3").val("");
+    $("#PLine3").val("");
+    $("#PLine18").val("");
+    $("#Line4").val("");
+    $("#PLine4").val("");
+    $("#PLine7").val("");
+    $("#Line5").val("");
+    $("#PLine6").val("");
+    $("#PLine9").val("");
+    $("#Line6").val("");
+    $("#PLine8").val("");
+    $("#PLine11").val("");
+    $("#Line7").val("");
+    $("#PLine10").val("");
+    $("#PLine13").val("");
+    $("#Line8").val("");
+    $("#PLine12").val("");
+    $("#PLine15").val("");
+    $("#Line9").val("");
+    $("#PLine14").val("");
+    $("#PLine17").val("");
+    $("#Line10").val("");
+    $("#PLine16").val("");
+    $("#PLine19").val("");
+}
+
+
+ 
