@@ -231,4 +231,96 @@ function clearAll()
 }
 
 
+function setOriginal() {   
+
+    if (getPageLines() != null) {
+        setPoemText(getPageLines());
+    }
+    else {
+        alert("All Original Pantoum Lines are Required for Reset.")
+    }   
+}
+
+function setNew() {
+    if (getPageLines() != null) {
+        var newArray = getPageLines().slice();
+        setPoemText(shuffle(newArray));
+    }
+    else {
+        alert("All Original Pantoum Lines are Required for Randtoum.")
+    }
+}
+
+function getPageLines() {
+
+    var lines = new Array();    
+
+    lines[0] = $("#Line1").val();
+    lines[1] = $("#Line2").val();
+    lines[2] = $("#Line3").val();
+    lines[3] = $("#Line4").val();
+    lines[4] = $("#Line5").val();
+    lines[5] = $("#Line6").val();    
+    lines[6] = $("#Line7").val();
+    lines[7] = $("#Line8").val();
+    lines[8] = $("#Line9").val();
+    lines[9] = $("#Line10").val()
+
+    for (i = 0; i < lines.length; i++) {
+        if (lines[i] == "") {
+            return null;
+        }
+    }
+
+    return lines;
+}
+
+function setPoemText(strAryLines) {
+
+    // this has pantoum pattern
+
+    $("#PLine1").val(strAryLines[0]);
+    $("#PLine2").val(strAryLines[2]);
+    $("#PLine3").val(strAryLines[1]);
+    $("#PLine4").val(strAryLines[3]);
+    $("#PLine5").val(strAryLines[2]);
+    $("#PLine6").val(strAryLines[4]);
+    $("#PLine7").val(strAryLines[3]);
+    $("#PLine8").val(strAryLines[5]);
+    $("#PLine9").val(strAryLines[4]);
+    $("#PLine10").val(strAryLines[6]);
+    $("#PLine11").val(strAryLines[5]);
+    $("#PLine12").val(strAryLines[7]);
+    $("#PLine13").val(strAryLines[6]);
+    $("#PLine14").val(strAryLines[8]);
+    $("#PLine15").val(strAryLines[7]);
+    $("#PLine16").val(strAryLines[9]);
+    $("#PLine17").val(strAryLines[8]);
+    $("#PLine18").val(strAryLines[1]);
+    $("#PLine19").val(strAryLines[9]);
+    $("#PLine20").val(strAryLines[0]);
+
+}
+
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+}
+
+
+
  

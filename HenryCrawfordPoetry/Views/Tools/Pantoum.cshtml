@@ -24,7 +24,7 @@
             </div>
             <div class="col-md-3">
                 <div class="listing-image">
-                    <img width="325" src="~/Images/Website/Pantoum_Paradise.jpg" alt="Pantoum Paradise Logo" />
+                    <img width="380" src="~/Images/Website/Pantoum_Paradise.jpg" alt="Pantoum Paradise Logo" />
                 </div>
             </div>
 
@@ -55,65 +55,75 @@
 
                             <div class="form-group form-inline">
                                 <label for="Line1">Line 1</label>
-                                <input type="text" style="width:400px" class="form-control" id="Line1" name="Line1" value="@Model.Line1" placeholder="Line 1 of 1st Quatrain + Line 4 of 5th Quatrain">
+                                <input required type="text" style="width:400px" class="form-control" id="Line1" name="Line1" value="@Model.Line1" placeholder="Line 1 of 1st Quatrain + Line 4 of 5th Quatrain">
                                 <button type="button" onclick="setPantoumLine(document.getElementById('Line1').value, 1);" class="btn btn-base-1">Set</button>
                                 <button type="button" onclick="clearPantoumLine(1);" class="btn btn-base-1">Clr</button>
                             </div>
                             <div class="form-group form-inline">
                                 <label for="Line2">Line 2</label>
-                                <input type="text" style="width:400px" class="form-control" id="Line2" name="Line2" value="@Model.Line2" placeholder="Line 2 of 1st Quatrain + 1st line of 2nd Quatrain">
+                                <input required type="text" style="width:400px" class="form-control" id="Line2" name="Line2" value="@Model.Line2" placeholder="Line 2 of 1st Quatrain + 1st line of 2nd Quatrain">
                                 <button type="button" onclick="setPantoumLine(document.getElementById('Line2').value, 2);" class="btn btn-base-1">Set</button>
                                 <button type="button" onclick="clearPantoumLine(2);" class="btn btn-base-1">Clr</button>
                             </div>
                             <div class="form-group form-inline">
                                 <label for="Line3">Line 3</label>
-                                <input type="text" style="width:400px" class="form-control" id="Line3" name="Line3" value="@Model.Line3" placeholder="Line 3 of 1st Quatrain + 2nd line of 5th Quatrain">
+                                <input required type="text" style="width:400px" class="form-control" id="Line3" name="Line3" value="@Model.Line3" placeholder="Line 3 of 1st Quatrain + 2nd line of 5th Quatrain">
                                 <button type="button" onclick="setPantoumLine(document.getElementById('Line3').value, 3);" class="btn btn-base-1">Set</button>
                                 <button type="button" onclick="clearPantoumLine(3);" class="btn btn-base-1">Clr</button>
                             </div>
                             <div class="form-group form-inline">
                                 <label for="Line4">Line 4</label>
-                                <input type="text" style="width:400px" class="form-control" id="Line4" name="Line4" value="@Model.Line4" placeholder="Line 4 of 1st Quatrain + 3rd line of 2nd Quatrain">
+                                <input required type="text" style="width:400px" class="form-control" id="Line4" name="Line4" value="@Model.Line4" placeholder="Line 4 of 1st Quatrain + 3rd line of 2nd Quatrain">
                                 <button type="button" onclick="setPantoumLine(document.getElementById('Line4').value, 4);" class="btn btn-base-1">Set</button>
                                 <button type="button" onclick="clearPantoumLine(4);" class="btn btn-base-1">Clr</button>
                             </div>
                             <div class="form-group form-inline">
                                 <label for="Line5">Line 5</label>
-                                <input type="text" style="width:400px" class="form-control" id="Line5" name="Line5" value="@Model.Line5" placeholder="Line 2 of 2nd Quatrain + 1st line of 3rd Quatrain">
+                                <input required type="text" style="width:400px" class="form-control" id="Line5" name="Line5" value="@Model.Line5" placeholder="Line 2 of 2nd Quatrain + 1st line of 3rd Quatrain">
                                 <button type="button" onclick="setPantoumLine(document.getElementById('Line5').value, 5);" class="btn btn-base-1">Set</button>
                                 <button type="button" onclick="clearPantoumLine(5);" class="btn btn-base-1">Clr</button>
                             </div>
                             <div class="form-group form-inline">
                                 <label for="Line6">Line 6</label>
-                                <input type="text" style="width:400px" class="form-control" id="Line6" name="Line6" value="@Model.Line6" placeholder="Line 4 of 2nd Quatrain + 3rd line of 3rd Quatrain">
+                                <input required type="text" style="width:400px" class="form-control" id="Line6" name="Line6" value="@Model.Line6" placeholder="Line 4 of 2nd Quatrain + 3rd line of 3rd Quatrain">
                                 <button type="button" onclick="setPantoumLine(document.getElementById('Line6').value, 6);" class="btn btn-base-1">Set</button>
                                 <button type="button" onclick="clearPantoumLine(6);" class="btn btn-base-1">Clr</button>
                             </div>
                             <div class="form-group form-inline">
                                 <label for="Line7">Line 7</label>
-                                <input type="text" style="width:400px" class="form-control" id="Line7" name="Line7" value="@Model.Line7" placeholder="Line 2 of 3nd Quatrain + 1st line of 4th Quatrain">
+                                <input required type="text" style="width:400px" class="form-control" id="Line7" name="Line7" value="@Model.Line7" placeholder="Line 2 of 3nd Quatrain + 1st line of 4th Quatrain">
                                 <button type="button" onclick="setPantoumLine(document.getElementById('Line7').value, 7);" class="btn btn-base-1">Set</button>
                                 <button type="button" onclick="clearPantoumLine(7);" class="btn btn-base-1">Clr</button>
                             </div>
                             <div class="form-group form-inline">
                                 <label for="Line8">Line 8</label>
-                                <input type="text" style="width:400px" class="form-control" id="Line8" name="Line8" value="@Model.Line8" placeholder="Line 4 of 3rd Quatrain + 3rd line of 4th Quatrain">
+                                <input required type="text" style="width:400px" class="form-control" id="Line8" name="Line8" value="@Model.Line8" placeholder="Line 4 of 3rd Quatrain + 3rd line of 4th Quatrain">
                                 <button type="button" onclick="setPantoumLine(document.getElementById('Line8').value, 8);" class="btn btn-base-1">Set</button>
                                 <button type="button" onclick="clearPantoumLine(8);" class="btn btn-base-1">Clr</button>
                             </div>
                             <div class="form-group form-inline">
                                 <label for="Line9">Line 9</label>
-                                <input type="text" style="width:400px" class="form-control" id="Line9" name="Line9" value="@Model.Line9" placeholder="Line 2 of 4th Quatrain + 1st line of 5th Quatrain">
+                                <input required type="text" style="width:400px" class="form-control" id="Line9" name="Line9" value="@Model.Line9" placeholder="Line 2 of 4th Quatrain + 1st line of 5th Quatrain">
                                 <button type="button" onclick="setPantoumLine(document.getElementById('Line9').value, 9);" class="btn btn-base-1">Set</button>
                                 <button type="button" onclick="clearPantoumLine(9);" class="btn btn-base-1">Clr</button>
                             </div>
                             <div class="form-group form-inline" style="margin-left:-8px">
                                 <label for="Line10">Line 10</label>
-                                <input type="text" style="width:400px" class="form-control" id="Line10" name="Line10" value="@Model.Line10" placeholder="Line 4 of 4th Quatrain + 3rd line of 5th Quatrain">
+                                <input required type="text" style="width:400px" class="form-control" id="Line10" name="Line10" value="@Model.Line10" placeholder="Line 4 of 4th Quatrain + 3rd line of 5th Quatrain">
                                 <button type="button" onclick="setPantoumLine(document.getElementById('Line10').value, 10);" class="btn btn-base-1">Set</button>
                                 <button type="button" onclick="clearPantoumLine(10);" class="btn btn-base-1">Clr</button>
                             </div>
                             <br />
+
+                            <div class="form-group form-inline">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="button" onclick="setNew();" class="btn btn-base-1">Make RandToum</button>
+                                    <button type="button" onclick="setOriginal();" class="btn btn-base-1">Reset Original</button>
+                                </div>
+                            </div>
+
+
+                            <br /><br /><br />
                             <div class="section-title-wrapper style-1 v1">
                                 <h3 class="section-title section-title-sm left">
                                     <span>Links</span>
