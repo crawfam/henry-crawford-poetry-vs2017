@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<meta property="og:url" content="http://henrycrawfordpoetry.com/AmSoft2/Trump_Speech.html#" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="a Donald Trump RandToum" />
+	<meta property="og:description" content="Why Do Wealthy Politicians Build Walls" />
+	<meta property="og:image" content="http://henrycrawfordpoetry.com/Images/AmSoft2/trump_speech.jpg" />
+
+
+	<title>Trump Speech</title>
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
+
+
+	<!--http://webdesignernotebook.com/css/styling-a-poem-with-advanced-css-selectors/
+	http://webdesignernotebook.com/examples/twinkle-twinkle.html-->
+
+
+	<style>
+
+		body {
+			background: #FFF;
+			color: #111;
+			font: 14px Baskerville, "Palatino Linotype", "Times New Roman", Times, serif;
+			text-align: center;
+		}
+
+		div, h1, h2, p {
+			margin: 0;
+			padding: 0;
+		}
+
+		#poem {
+			margin: auto;
+			padding: 20px 0;
+			text-align: left;
+			width: 390px;
+		}
+
+		h1, h2 {
+			font-weight: normal;
+			text-align: center;
+		}
+
+		h1 {
+			font-size: 34px;
+			line-height: 1.2;
+			margin-bottom: 10px;
+		}
+
+		h2 {
+			color: #666;
+			font-size: 18px;
+			font-style: italic;
+			margin-bottom: 30px;
+		}
+
+		p {
+			line-height: 1.5;
+			margin-bottom: 15px;
+		}
+	</style>
+
+</head>
+
+
+<body>
+
+
+
+	<div id="poem">
+		<h1>Why Do Wealthy Politicians Build Walls?</h1>
+		<h2>
+			A RandToum based on lines of text from President Trump's January 8, 2019, Oval Office speech
+		</h2>
+		<h2>
+		   <a href="#" onclick="setNew();">Click to Create a New Poem</a>
+		</h2>
+
+		<p>
+			<div id="line1"></div>
+			<div id="line2"></div>
+			<div id="line3"></div>
+			<div id="line4"></div>
+		</p>
+		<p>
+			<div id="line5"></div>
+			<div id="line6"></div>
+			<div id="line7"></div>
+			<div id="line8"></div>
+		</p>
+		<p>
+			<div id="line9"></div>
+			<div id="line10"></div>
+			<div id="line11"></div>
+			<div id="line12"></div>
+		</p>
+		<p>
+			<div id="line13"></div>
+			<div id="line14"></div>
+			<div id="line15"></div>
+			<div id="line16"></div>
+		</p>
+		<p>
+			<div id="line17"></div>
+			<div id="line18"></div>
+			<div id="line19"></div>
+			<div id="line20"></div>
+		</p>
+
+
+	  
+			<div>
+				<h2>Henry Crawford</h2>
+			</div>
+	   
+
+
+	</div>
+
+	<script>
+
+
+		// ---------------- poem code -------------------------------//
+
+		var lines = [
+			"why do wealthy politicians build walls",
+			"thousands of illegal immigrants",                                                                 
+			"tonight I am speaking to you",
+			"beheading and dismembering",
+			"vast quantities of illegal drugs",
+			"in a 45-minute meeting",
+			"we are out of space to hold them",
+			"illegal immigrant children",
+			"hardest hit are African Americans",
+			"vicious coyotes and ruthless gangs",
+					];
+
+		function setPoemText(strAryLines) {
+
+			$("#line1").text(strAryLines[0]);
+			$("#line2").text(strAryLines[2]);
+			$("#line3").text(strAryLines[1]);
+			$("#line4").text(strAryLines[3]);
+			$("#line5").text(strAryLines[2]);
+			$("#line6").text(strAryLines[4]);
+			$("#line7").text(strAryLines[3]);
+			$("#line8").text(strAryLines[5]);
+			$("#line9").text(strAryLines[4]);
+			$("#line10").text(strAryLines[6]);
+			$("#line11").text(strAryLines[5]);
+			$("#line12").text(strAryLines[7]);
+			$("#line13").text(strAryLines[6]);
+			$("#line14").text(strAryLines[8]);
+			$("#line15").text(strAryLines[7]);
+			$("#line16").text(strAryLines[9]);
+			$("#line17").text(strAryLines[8]);
+			$("#line18").text(strAryLines[1]);
+			$("#line19").text(strAryLines[9]);
+			$("#line20").text(strAryLines[0]);
+
+		}
+
+		function shuffle(array) {
+			var currentIndex = array.length, temporaryValue, randomIndex;
+
+			// While there remain elements to shuffle...
+			while (0 !== currentIndex) {
+
+				// Pick a remaining element...
+				randomIndex = Math.floor(Math.random() * currentIndex);
+				currentIndex -= 1;
+
+				// And swap it with the current element.
+				temporaryValue = array[currentIndex];
+				array[currentIndex] = array[randomIndex];
+				array[randomIndex] = temporaryValue;
+			}
+
+			return array;
+		}
+
+		function setOriginal() {            
+			setPoemText(lines);
+		}
+
+		function setNew() {
+			var newArray = lines.slice();
+			setPoemText(shuffle(newArray));
+		}
+
+		$(document).ready(function () {
+			$("[data-toggle='tooltip']").tooltip();
+			$('[data-toggle="popover"]').popover();
+		});
+
+
+		setOriginal();
+		
+		
+	</script>
+
+</body>
+
+</html>
