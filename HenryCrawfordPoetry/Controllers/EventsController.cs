@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace HenryCrawfordPoetry.Controllers
 {
@@ -14,21 +10,17 @@ namespace HenryCrawfordPoetry.Controllers
         {
             return View();
         }
-        
-        public ActionResult ThirdThursdayPoetrySeries()
+
+        [AllowAnonymous]
+        public FileResult DownloadWorkshopSlides()
         {
-            return View();
+            string filePathName = Server.MapPath(@"~\App_Data\Writing_Poetry_for_Electonric_Media.pdf");
+
+            byte[] fileBytes = System.IO.File.ReadAllBytes(filePathName);
+            string fileName = "Workshop_Slides.pdf";
+            return File(fileBytes, System.Net.Mime.MediaTypeNames.Application.Pdf, fileName);
         }
 
-        public ActionResult CafeMuse()
-        {
-            return View();
-        }
-
-        public ActionResult WildeReadings()
-        {
-            return View();
-        }
 
 
     }
