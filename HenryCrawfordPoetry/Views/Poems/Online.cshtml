@@ -332,20 +332,8 @@
                         </h3>
                         <p>
                             Olentangy Review: Winter, 2017
-                        </p>
-                        <a target="_blank" href="http://olentangyreview.com/index.html" class="btn btn-sm btn-b-base-1 mt-15">Olentangy Review</a>
-                        <br /><br />
-                        <a target="_blank" href="@Url.Action("Poem", "Poems", new {fileName="henry_crawford_the_sonnosphere.html"})">The Sonnosphere [Fragments of a Sci-Fi Space Epic]</a>
-                        <br /><br />
-                        <p>Audio Reading of the Poem:</p>
-                        <audio controls preload="none" style="width:280px;">
-                            <source src="~/videos/The_Sonnosphere.mp3" type="audio/mp3" />
-                            <p>Your browser does not support HTML5 audio.</p>
-                        </audio>
-                        <p>
-                            <strong>Download Audio:</strong>
-                            <a href="~/videos/The_Sonnosphere.mp3">mp3</a>,
-                        </p>
+                        </p>                        
+                        @Html.ActionLink("The Sonnosphere", "Poem", "Poems", new { fileName = "henry_crawford_the_sonnosphere.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15", target = "_blank" })
                     </div>
                 </div>
 
@@ -357,13 +345,12 @@
                         <h3 class="block-title">
                             HAL 9000
                         </h3>
-                        <ul class="inline-meta">
-                            <li><a href="http://lit.cat/">Lit.Cat</a></li>
-                        </ul>
+                        <p>
+                            Lit.Cat                        
                         <p>
                             What made a good computer go bad? Here's HAL's story a year before the Jupiter launch.
                         </p>
-                        <a target="_blank" href="http://lit.cat/reads/hal-9000" class="btn btn-sm btn-b-base-1 mt-15">HAL 9000</a>
+                        @Html.ActionLink("HAL 9000", "Poem", "Poems", new { fileName = "henry_crawford_HAL_9000.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15", target = "_blank" })
                     </div>
                 </div>
 
@@ -485,21 +472,6 @@
 
                 <span class="clearfix mt-20"></span>
 
-                <div id="scryptic_magazine" class="block block-image v3 mb-40">
-                    <div class="block-image">
-                        <img src="~/Images/Poems/scryptic_magazine.jpg">
-                    </div>
-                    <div class="block-content">
-                        <h3 class="block-title">
-                            Scryptic Magazine
-                        </h3>
-                        <a target="_blank" href="http://scrypticmagazine.wixsite.com/scryptic" class="btn btn-sm btn-b-base-1 mt-15">Scryptic Magazine</a>
-                        <br /><br />
-
-                    </div>
-                </div>
-
-                <span class="clearfix mt-20"></span>
 
 
             </div>
