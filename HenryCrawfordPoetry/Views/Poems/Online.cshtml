@@ -107,10 +107,12 @@
                     </div>
                     <div class="block-content">
                         <h3 class="block-title">
-                            The MetaKiller<br /><small>December 2018 Issue, page 26</small>
+                            The MetaKiller
                         </h3>
-                        <a target="_blank" class="btn btn-sm btn-b-base-1 mt-15" href="http://docs.wixstatic.com/ugd/396b91_f88ab632e8114bf5854ee7fd3210bcec.pdf#page=26">Scryptic Magazine of Alternative Art</a>
-
+                        <p>
+                            Scryptic Magazine of Alternative Art
+                        </p>
+                        @Html.ActionLink("The Metakiller", "Poem", "Poems", new { fileName = "henry_crawford_the_metakiller.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15", target = "_blank" })
                     </div>
                 </div>
 
@@ -256,19 +258,11 @@
                         <h3 class="block-title">
                             And Now a Word From the Management
                         </h3>
-                        <a target="_blank" href="http://scrypticmagazine.wixsite.com/scryptic/current-issue" class="btn btn-sm btn-b-base-1 mt-15">Scryptic Magazine, 1.4, March 2018</a>
-                        <br /><br />
-                        <a target="_blank" href="@Url.Action("Poem", "Poems", new {fileName="henry_crawford_and_now_a_word_from_the_managment.html"})">HTML Version of the Poem</a>
-                        <br /><br />
-                        <p>Audio Reading of the Poem:</p>
-                        <audio controls preload="none" style="width:280px;">
-                            <source src="~/videos/Word_From_Managment.mp3" type="audio/mp3" />
-                            <p>Your browser does not support HTML5 audio.</p>
-                        </audio>
                         <p>
-                            <strong>Download Audio:</strong>
-                            <a href="~/videos/The_Sonnosphere.mp3">mp3</a>,
+                            Scryptic Magazine of Alternative Art
                         </p>
+                        @Html.ActionLink("And Now a Word From the Management", "Poem", "Poems", new { fileName = "henry_crawford_and_now_a_word_from_the_managment.html" }, new { @class = "btn btn-sm btn-b-base-1 mt-15", target = "_blank" })
+
                     </div>
                 </div>
 
