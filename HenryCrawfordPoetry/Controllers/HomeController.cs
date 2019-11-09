@@ -30,6 +30,15 @@ namespace HenryCrawfordPoetry.Controllers
         }
 
         [AllowAnonymous]
+        public FileResult DownloadParkmontReading()
+        {
+            string filePathName = Server.MapPath(@"~\App_Data\Parkmont Reading 2019-11-07.pdf");
+            byte[] fileBytes = System.IO.File.ReadAllBytes(filePathName);
+            string fileName = "Poetry_at Parkmont_Reading_Crawford.pdf";
+            return File(fileBytes, System.Net.Mime.MediaTypeNames.Application.Octet, fileName);
+        }
+
+        [AllowAnonymous]
         public FileResult DownloadTakomaParkReading()
         {
             string filePathName = Server.MapPath(@"~\App_Data\Templates\American_Software_at_Takoma_Park.pdf");
