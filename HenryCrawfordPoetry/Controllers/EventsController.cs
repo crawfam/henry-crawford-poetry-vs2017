@@ -8,6 +8,7 @@ namespace HenryCrawfordPoetry.Controllers
         // GET: /Events/
         public ActionResult Index()
         {
+            // goes to the events home page page
             return View();
         }
 
