@@ -1,27 +1,42 @@
 ﻿@{
-    ViewBag.Title = "Guest Artists";
+    ViewBag.Title = "Guest Test";
 }
 
 @section AdditionalMetatags
 {
-    <meta property="og:url" content="http://henrycrawfordpoetry.com/Poems/GuestTest/" />
+    <meta property="og:url" content="http://henrycrawfordpoetry.com/Poems/GuestTest" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Burgi Zenhaeusern" />
-    <meta property="og:description" content="border/s" />
-    <meta property="og:image" content="http://henrycrawfordpoetry.com/Images/Poems/burgi_zenhaeusern_borders.jpg" />
+    <meta property="og:title" content="David Ebenbach" />
+    <meta property="og:description" content="While They Choose a New Pope, I Eat a Bagel" />
+    <meta property="og:image" content="http://henrycrawfordpoetry.com/Images/Poems/david_ebenbach_while_they_choose_a_new_pope,_i_eat_a_bagel.jpg" />
 }
 
 
 <!-- SECTION -->
 <!-- SECTION -->
 <section class="sct-color-1 slice">
-    <div class="container"> 
+    <div class="container">
 
         <div class="row">
 
             <div class="col-md-1">&nbsp;</div>
 
             <div class="col-md-9">
+
+                <h2 id="david_ebenbach">David Ebenbach</h2>
+
+                <div class="block block-image v3 mb-40">
+                    <div class="block-image">
+                        <img src="~/Images/Poems/david_ebenbach_while_they_choose_a_new_pope,_i_eat_a_bagel.jpg" alt="While They Choose a New Pope, I Eat a Bagel" />
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">
+                            While They Choose a New Pope, I Eat a Bagel<br />
+                        </h3>
+                        <a class="btn btn-sm btn-b-base-1 mt-15" href="@Url.Action("Poem", "Poems", new {fileName="david_ebenbach_while_they_choose_a_new_pope,_i_eat_a_bagel.html"})">While They Choose a New Pope, I Eat a Bagel</a>
+                    </div>
+                </div>
+
 
                 <h2 id="burgi_zenhaeusern">Burgi Zenhaeusern</h2>
 
@@ -480,6 +495,14 @@
                             </h3>
                         </div>
                         <ul class="list-image">
+
+                            <li>
+                                <img src="~/Images/Poems/burgi_zenhaeusern_borders.jpg" alt="border/s" />
+                                <p>
+                                    <a href="#burgi_zenhaeusern">Burgi Zenhaeusern</a>
+                                </p>
+                            </li>
+
 
                             <li>
                                 <img src="~/Images/Poems/quasar_anthem_for_the_earth.jpg" alt="Anthem for the Earth" />
