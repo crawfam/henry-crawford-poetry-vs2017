@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html>  
+<head>
+ 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow"> 
+
+<meta name="Henry Crawford Poetry" content="The Poetry of Henry Crawford, American Software">
+<meta name="author" content="Henry Crawford">
+
+	
+@RenderSection("AdditionalMetatags", false)
+@RenderSection("Styles", false)
+
+	
+<title>@ViewBag.Title</title>
+
+<!-- BOOTSTRAP -->
+<link rel="stylesheet" href="~/content/assets/bootstrap/css/bootstrap.min.css" type="text/css">
+
+<!-- ANIMATE -->
+<link rel="stylesheet" href="~/content/animate/animate.min.css" type="text/css">
+
+<!-- WEB FONTS -->
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- ICON FONTS -->
+<link rel="stylesheet" href="~/content/fonts/font-awesome/css/font-awesome.min.css" type="text/css"> 
+<link rel="stylesheet" href="~/content/fonts/ionicons/css/ionicons.min.css" type="text/css"> 
+
+<!-- GLOBAL STYLE -->
+<link id="stylesheetGlobal" type="text/css" href="~/content/css/global-style-blue.min.css" rel="stylesheet" media="screen">
+		<!-- CUSTOM STYLE -- Remove if not necessary -->
+<link type="text/css" href="~/content/css/custom-style.css" rel="stylesheet">
+
+<!-- ASSETS -->
+<link rel="stylesheet" href="~/content/assets/owl-carousel/css/owl.carousel.css" type="text/css">
+<link rel="stylesheet" href="~/content/assets/owl-carousel/css/owl.theme.css" type="text/css">
+<link rel="stylesheet" href="~/content/assets/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen"> 
+
+<!-- FAVICON -->
+<link href="~/content/images/favicon.ico" rel="icon" type="image/png">
+
+@{ Html.RenderPartial("_GoogleAnalytics"); }
+
+</head>
+
+<body>
+
+
+<!-- MAIN WRAPPER -->
+<div class="body-wrap">
+
+	<div id="st-container" class="st-container">  
+
+	<div class="st-pusher">
+		<div class="st-content">
+			<div class="st-content-inner">
+				<!-- HEADER -->
+				<div class="header" id="header">
+					<!-- NAVBAR -->
+					<nav class="navbar navbar-main navbar-shadow" role="navigation" id="slide-nav">
+						<div class="container relative">
+							<div class="navbar-header">
+								<!-- LOGO -->
+								<a class="navbar-logo" href="#">
+									<h1>Professor Jeff <small>Sound & Music</small></h1>
+								</a>
+								<!-- NAVBAR TOGGLE -->
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<!-- SLIDEBAR TOGGLE -->
+							</div>
+						</div>
+					</nav>
+				</div>
+
+				@RenderBody()
+
+
+				<!-- FOOTER -->
+				<footer class="footer style-2">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3">
+								<div class="col">
+									<h1>DC Poetry</h1>
+									<p class="no-margin">
+										The DC area is rich with poetic voices. Readings are held all over the area year round. There are several journals devoted to DC poetry. These, along with the academic institutions, help to contribute to a vibrant community of poets. Here are just a few favorite links.
+									</p>
+								</div>
+							</div>
+
+							<div class="col-md-2">
+								<div class="col">
+									<h4>Journals</h4>
+									<ul>
+										<li><a target="_blank" href="http://www.beltwaypoetry.com/" title="Beltway Poetry">Beltway Poetry Quarterly</a></li>
+										<li><a target="_blank" href="http://districtlit.com/index" title="District Lit">District Lit</a></li>
+										<li><a target="_blank" href="https://poetlore.com/" title="Poet Lore">Poet Lore</a></li>
+										<li><a target="_blank" href="http://www.tidalbasinpress.org/" title="Tidal Basin Review">Tidal Basin Reivew</a></li>
+										<li><a target="_blank" href="http://www.american.edu/cas/literature/folio/" title="Folio">Folio - American University</a></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="col-md-2">
+								<div class="col">
+									<h4>Readings</h4>
+									<ul>
+										<li><a target="_blank" href="http://www.beltwaypoetry.com/events/cafe-muse-51/" title="About">Cafe Muse Series</a></li>
+										<li><a target="_blank" href="https://www.nps.gov/event/event-details.htm?eventID=2927985" title="Joaquin Miller Poetry Series">Joaquin Miller Poetry Series</a></li>
+										<li><a target="_blank" href="http://www.busboysandpoets.com/poetry" title="Busboys and Poets">Busboys and Poets</a></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="col-md-2">
+								<div class="col">
+									<h4>Community</h4>
+									<ul>
+										<li><a target="_blank" href="https://www.writer.org/" title="About">The Writer's Center</a></li>
+										<li><a target="_blank" href="https://www.dclibrary.org/node/29736" title="Federal Poets Society">Federal Poets Society</a></li>
+										<li><a target="_blank" href="http://splendidwake.blogspot.com/" title="Splendid Wake">A Splendid Wake</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="col">
+									<h4>Area Poet Websites</h4>
+                                    <ul>
+                                        <li><a target="_blank" href="http://alenier.blogspot.com/" title="Karren Alenier">Karren Alenier</a></li>
+                                        <li><a target="_blank" href="http://www.judithbowles.com/" title="Judy Bowles">Judy Bowles</a></li>
+                                        <li><a target="_blank" href="https://www.joannerockydelaplaine.com/" title="Joanne Rocky Delaplaine">Joanne Rocky Delaplaine</a></li>
+                                        <li><a target="_blank" href="http://donaldillich.blogspot.com/" title="Donald Illich">Donald Illich</a></li>
+                                        <li><a target="_blank" href="http://www.davidkeplingerpoetry.com/" title="David Keplinger">David Keplinger</a></li>
+                                        <li><a target="_blank" href="http://susanokie.com/" title="Susan Okie">Susan Okie</a></li>
+                                        <li><a target="_blank" href="http://www.kimroberts.org/" title="Kim Roberts">Kim Roberts</a></li>
+                                        <li><a target="_blank" href="https://www.kermitmoyer.net/" title="Kermit Moyer">Kermit Moyer</a></li>
+                                    </ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</footer>
+				<div class="copyright style-1">
+					<div class="container">
+						<div class="div-table v-middle">
+							<div class="cell">
+								All rights reserved. Copyright &copy; 2018 <span class="company-rights">Henry Crawford</span>
+							</div>
+							<div class="cell">
+								<div class="social-media style-2 v4 text-right">
+									<a target="_blank" href="https://www.facebook.com/AmericanSoftwarePoetry/" class="facebook">
+										<i class="fa fa-facebook "></i>
+									</a>
+									<a target="_blank" href="mailto:HenryCrawfordPoetry@gmail.com" class="google-plus">
+										<i class="fa fa-google-plus "></i>
+									</a>
+									<a target="_blank" href="https://www.youtube.com/channel/UCU_hLdGUflx3IqAR8POOlSw" class="youtube">
+										<i class="fa fa-youtube"></i>
+									</a>
+									<a target="_blank" href="https://twitter.com/Crawfam" class="twitter">
+										<i class="fa fa-twitter "></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>            </div>
+		</div>
+	</div><!-- END: st-pusher -->
+</div><!-- END: body-wrap -->
+
+<!-- SCRIPTS -->
+
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
+	fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+
+
+</script>
+
+<!-- Required JSs -->
+<script src="~/content/js/jquery.js"></script>
+<script src="~/content/js/jquery-ui.min.js"></script>
+
+<!-- Essential JSs -->
+<script src="~/content/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="~/content/assets/bootstrap/js/tooltip.js"></script>
+<script src="~/content/js/bootstrap-extensions/bootstrap-dropdownhover.js"></script>
+<script src="~/content/js/bootstrap-extensions/bootstrap.slide-menu.js"></script>
+<script src="~/content/js/bootstrap-extensions/bootstrap-validator.js"></script>
+<script src="~/content/js/modernizr.custom.js"></script>
+<script src="~/content/js/jquery.mousewheel-3.0.6.pack.js"></script>
+<script src="~/content/js/jquery.easing.js"></script>
+<script src="~/content/js/classie.js"></script>
+
+<!-- Assets - Required -->
+<script src="~/content/assets/parallax/parallax.min.js"></script>
+<script src="~/content/assets/page-scroller/jquery.ui.totop.min.js"></script>
+<script src="~/content/assets/waypoints/waypoints.min.js"></script>
+
+<!-- Assets - Optional (keep what you need) -->
+<!-- Sidebar transitions -->
+<script src="~/content/js/sidebar-transitions/sidebar-transitions.js"></script>
+<!-- Smooth scroll -->
+<script src="~/content/js/jquery.smoothscroll.js"></script>
+<!-- Media gallery view -->
+<script src="~/content/assets/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<!-- Animated counter -->
+<script src="~/content/assets/milestone-counter/jquery.countTo.js"></script>
+<!-- Animated pie charts -->
+<script src="~/content/assets/easy-pie-chart/js/jquery.easypiechart.js"></script>
+<!-- Owl carousel - Touch enabled carousel -->
+<script src="~/content/assets/owl-carousel/js/owl.carousel.min.js"></script>
+
+<!-- Cross-browser responsivity scripts -->
+<!--[if lt IE 9]>
+	<script src="~/js/html5shiv.js"></script>
+	<script src="~/js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Google Analitycs JS -->
+<script type="text/javascript" src="~/content/js/dvs.ga.js"></script>
+
+<!-- App JS -->
+<script src="~/content/js/dvs.app.js"></script>
+
+@RenderSection("Scripts", false)
+
+</body>
+</html> 
