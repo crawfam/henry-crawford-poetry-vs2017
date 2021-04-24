@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>Accordian Demo</title>
+
+    <!-- Google Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Baskerville" rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+
+    <style>
+
+        body {
+            background: #FFF;
+            color: #111;
+            font: 18px Baskerville, "Palatino Linotype", "Times New Roman", Times, serif;
+            text-align: left;
+        }
+
+        /* for video controls */
+        .sizer {
+            width: 300px;
+        }
+
+        /* =Inline bulleted lists
+        ------------------------------------ */
+        .list-horizontal li {
+            display:inline-block;
+        }
+        .list-horizontal li:before {
+            content: '\00a0\2022\00a0\00a0';
+            color:#999;
+            color:rgba(0,0,0,0.5);
+            font-size:11px;
+        }
+        /* .list-horizontal li:first-child:before {
+            content: '';
+        } */
+        
+    </style>
+
+</head>
+
+
+<body>
+    <br /><br />
+    <section>
+        <div class="container">
+            <div class="row">
+                <h1>Grace Cavalieri Information Web Page</h1>
+                <p>
+                    This demo page is based on the existing poet laureate page implemented by MSAC at: <a target="_blank" href="https://www.msac.org/programs/poet-laureate">https://www.msac.org/programs/poet-laureate</a>. The suggested changes were made using standard text and HTML which should be compatible with the styles and framework of the MSAC website.
+                </p>
+
+                <p>
+                    The accordion at the bottom of the current page has been replaced by two sections of accordions: <b>Poet Laureate Information</b> and <b>Poet Laureate Projects</b>. The first section reiterates the existing <i>Inquiries/Questions</i> and <i>Press</i> areas. The existing <i>Podcasts</i> and <i>Former Maryland Poet Laureates</i> areas have been removed.
+                </p>
+
+                <p>
+                    The new accordion section <b>Poet Laureate Projects</b> contains three new sections highlighting the specific projects of the poet laureate: <i>Teens Seen and Heard</i>, <i>Voices of Maryland Poets</i> and <i>U.S. Poet Laureates who were Maryland Residents</i>.
+                </p>                
+            </div>
+        </div>
+    </section>
+
+    <section>
+
+        <hr />
+        <div class="container">
+            <h1>Poet Laureate Information</h1>
+
+            <br /><br />
+            <div class="row">
+                <div class="col-sm-10">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOneTop">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneTop" aria-expanded="true" aria-controls="collapseOneTop">
+                                    <span style="font-size:x-large">Inquiries/Questions</span>
+                                </button>
+                            </h2>
+                            <div id="collapseOneTop" class="accordion-collapse collapse" aria-labelledby="headingOneTop" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p><span><span><span><span><span><span>For further information regarding the Maryland Poet Laureate position please contact Keyonna Penick, Poet Laureate Liaison, at <a href="mailto:keyonna.penick1@maryland.gov" title="Email Keyonna">keyonna.penick1@maryland.gov</a>.</span></span></span></span></span></span></p>
+                                    <p><span><span><span><span><span><span>If you need assistance in using this form, please contact the MSAC office at 410-767-6555 or TDD/TTY: 410-333-4519</span></span></span></span></span></span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwoTop">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoTop" aria-expanded="true" aria-controls="collapseTwoTop">
+                                    <span style="font-size:x-large">Press</span>
+                                </button>
+                            </h2>
+
+                            <div id="collapseTwoTop" class="accordion-collapse collapse" aria-labelledby="headingTwoTop" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li><a target="_blank" href="https://www.msac.org/sites/default/files/files/Poet%20Laureate%20Fact%20Sheet%20-%20Cavalieri.docx">Poet Laureate of Maryland Fact Sheet (Cavalieri)</a></li>
+                                        <li><a target="_blank" href="https://governor.maryland.gov/2018/12/14/governor-hogan-announces-poet-laureate-appointment/">Cavalieri Poet Laureate Governor Hogan Press Release</a></li>
+                                        <li><a target="_blank" href="http://www.loc.gov/rr/main/poets/maryland.html">Cavalieri - Library of Congress</a></li>
+                                        <li><a target="_blank" href="http://www.loc.gov/poetry/media/poetpoem.html">The Poet and the Poem Episodes - Library of Congress</a></li>
+                                        <li><a target="_blank" href="https://www.gracecavalieri.com/">Cavalieri Website and Archived The Poet and The Poem Episodes</a></li>
+                                        <li><a target="_blank" href="https://www.poetryfoundation.org/poets/grace-cavalieri">Cavalieri Poetry Foundation Profile</a></li>
+                                        <li><a target="_blank" href="http://www.beltwaypoetry.com/poetry/poets/names/grace-cavalieri/">Cavalieri Selection of Poems and Essays</a></li>
+                                    </ul>
+
+                                    <ul>
+                                        <li><a target="_blank" href="http://digitaledition.baltimoresun.com/tribune/article_popover.aspx?guid=7c647af9-e3b3-4371-be43-333acd3e7e57">"Annapolis Resident Named State Poet," The Baltimore Sun</a></li>
+                                        <li><a target="_blank" href="https://www.capitalgazette.com/news/annapolis/ac-cn-poet-laureate-1215-story.html">"Annapolis Writer Grace Cavalieri named poet laureate of Maryland," Capital Gazette</a></li>
+                                        <li><a target="_blank" href="https://thekojonnamdishow.org/shows/2019-01-23/maryland-poet-laureate-grace-cavalieri-reflects-on-a-lifetime-loving-language">January 23, 2019 appearance on the Kojo Nnamdi show on WAMU</a></li>
+                                        <li><a target="_blank" href="https://wamu.org/story/19/01/24/marylands-86-year-old-poet-laureate-is-a-buddhist-mother-navy-wife-and-lifelong-badass/">Protector of language's beauty in dark times - WAMU</a></li>
+                                        <li><a target="_blank" href="https://www.arts.gov/audio/grace-cavalieri">Poet, Playwright, Broadcaster - NEA Podcast</a></li>
+                                        <li><a target="_blank" href="http://communitybuildingartworks.org/blog/the-community-writing-workshop-experience/?utm_source=Participants%2FFamily+Members&amp;utm_campaign=dfae2747dc-EMAIL_CAMPAIGN_2019_01_28_02_00_COPY_01&amp;utm_medium=email&amp;utm_term=0_8193d80277-dfae2747dc-66803799&amp;mc_cid=dfae2747dc&amp;mc_eid=76b0202198">"</a><a target="_blank" href="https://www.arts.gov/audio/grace-cavalieri">The Community Writing Workshop Experience</a><a target="_blank" href="http://communitybuildingartworks.org/blog/the-community-writing-workshop-experience/?utm_source=Participants%2FFamily+Members&amp;utm_campaign=dfae2747dc-EMAIL_CAMPAIGN_2019_01_28_02_00_COPY_01&amp;utm_medium=email&amp;utm_term=0_8193d80277-dfae2747dc-66803799&amp;mc_cid=dfae2747dc&amp;mc_eid=76b0202198">" Community Building Art Works</a></li>
+                                        <li><a target="_blank" href="https://www.nytimes.com/2019/04/25/arts/poets-laureate-fellowships.html">13 Poets Laureate Receive Fellowships for Civic Projects - The New York Times</a></li>
+                                        <li><a target="_blank" href="https://www.scene4.com/0619/karrenlalondealenier0619.html">"The Statesmanship of Being Poet Laureate" - Scene4 International Magazine of Arts and Culture</a></li>
+                                        <li><a target="_blank" href="https://www.msac.org/sites/default/files/files/SOLNIK%20QUILTING%20PR%20PDF.pdf">Maryland Poet Laureate gives voice to ex-slave whose quilt is in Smithsonian</a></li>
+                                        <li><a target="_blank" href="https://www.capitalgazette.com/lifestyles/ac-cn-poet-laureate-20190812-kwrmuww4z5aofi5mlnufitt6ya-story.html">"Maryland poet laureate connects the community, creates safe spaces to discover inner thoughts" Capital Gazette</a></li>
+                                        <li><a target="_blank" href="https://www.broadwayworld.com/off-broadway/article/BWW-Review-QUILTING-THE-SUN-Shines-at-Theater-For-The-New-City-20190909">BWW Review: QUILTING THE SUN Shines at Theater For The New City</a></li>
+                                        <li><a target="_blank" href="https://www.capitalgazette.com/lifestyles/ac-cn-annie-awards-20191012-ioox7v7ubrhrde2x2wgswle2me-story.html">2019 Arts Council of Anne Arundel County - Annie Award Winner</a> </li>
+                                        <li><a target="_blank" href="https://alenieratscene4.blogspot.com/2019/10/showboat-cavalieri-odyssey.html?m=1">Showboat: A Cavalieri Odyssey</a></li>
+                                        <li><a target="_blank" href="https://alansquirepublishing.com/2019/10/17/grace-cavalieri-receives-an-annie-award-for-literary-arts/?fbclid=IwAR1-5U1IJ92yL0341j1SAQRv5VzexIcwFlmzb880bGXaSYilRdC824LBaQg">Grace Cavalieri Receives an ANNIE Award for Literary Arts</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <br />
+    <br />
+
+    <section>
+
+        <hr />
+        <div class="container">
+            <h1>Poet Laureate Projects</h1>
+
+            <br /><br />
+            <div class="row">
+                <div class="col-sm-10">
+                    <div class="accordion" id="accordionExampleBot">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOneBot">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneBot" aria-expanded="true" aria-controls="collapseOneBot">
+                                    <span style="font-size:x-large"> Teens Seen and Heard</span>
+                                </button>
+                            </h2>
+                            <div id="collapseOneBot" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExampleBot">
+                                <div class="accordion-body">
+                                    <p>Grace Cavalieri, Poet Laureate of Maryland, is holding monthly poetry workshops in MD starting fall of 2019 for young people “who have something to say and would like to learn how to say it”.</p>
+                                    <p>This is a pilot program of 8 one-day workshops throughout Maryland that allows teenagers to get in touch with their inner core/heart, get in touch with who they are, and tell their stories in a safe place. It’s now become apparent that the need to reach teens is paramount. One small way is to go where we can reach them. We just call it “Poetry.”</p>
+                                    <p><span style="font-weight: 400;">Below is the basic template used for workshops</span></p>
+                                    <p><span style="font-weight: 400;">Meditation begins the practice and then a discussion of the four basic necessary elements for a good poem, or work of art:</span></p>
+
+                                    <div style="text-align:center">
+                                        <ul class="list-horizontal">
+                                            <li><b>thinking</b></li>
+                                            <li><b>feeling</b></li>
+                                            <li><b>senses</b></li>
+                                            <li><b>intuition</b></li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- <p><span style="font-weight: 400;">—&nbsp;</span><b>thinking</b><span style="font-weight: 400;">&nbsp;</span></p>
+                                    <p><span style="font-weight: 400;">—</span><b>feeling</b></p>
+                                    <p><span style="font-weight: 400;">—</span><b>senses</b><span style="font-weight: 400;">&nbsp;(sensual)&nbsp;</span></p>
+                                    <p><span style="font-weight: 400;">—</span><b>intuition</b></p> -->
+                                    <p><span style="font-weight: 400;">The meaning of each of the four basic elements are discussed.&nbsp;</span></p>
+                                    <p>The writing session brings the students within themselves by going through the floors of their lives in an elevator. Each floor represents a different year. This takes personal meditation and silence to obtain a story from one of the “Floors”.</p>
+                                    <p><span style="font-weight: 400;">The students leave the area to be alone to write what they “saw” on their “floor.” They return in 15 minutes having written from margin to margin just as they “saw” it. Writers then share what they “saw” on their “floor” with the group. Young writers stay with the narrative and just discuss how it becomes a poem.</span></p>
+                                    <p><span style="font-weight: 400;">The students also write a group sonnet and then use an oral tradition to speak in aloud as a “Crowd” poem.&nbsp; (Horspiel tradition) (as heard on Podcast)&nbsp;</span></p>
+                                    <p><span style="font-weight: 400;">Students also finish the sentences: &nbsp;I wish&nbsp; &nbsp;&nbsp;I wonder&nbsp; &nbsp;&nbsp;I dream&nbsp;&nbsp; &nbsp;I am afraid &nbsp; etc. (as heard on Podcast)</span></p>
+                                    <p><span style="font-weight: 400;">The writers are given 10 words that have no connection, and they connect them into poems and stories (Samples on Podcast.)</span></p>
+                                    <hr />
+                                    <p>
+                                        <strong>
+                                            Prince Frederick County MD, November 23, 2019:<br />
+                                        </strong><br />
+                                        <span style="text-decoration: underline;"><a href="https://www.futureofchildren.net/wp-content/uploads/2019/11/FFC1.png"><img class="aligncenter wp-image-3910 size-medium" src="./Resources/FFC_Poets-300x95.png" alt="" width="700" srcset="https://www.futureofchildren.net/wp-content/uploads/2020/01/FFC_Poets-300x95.png 300w, https://www.futureofchildren.net/wp-content/uploads/2020/01/FFC_Poets-1024x324.png 1024w, https://www.futureofchildren.net/wp-content/uploads/2020/01/FFC_Poets-768x243.png 768w, https://www.futureofchildren.net/wp-content/uploads/2020/01/FFC_Poets.png 1200w" sizes="(max-width: 300px) 100vw, 300px" /></a></span>
+                                    </p>
+                                    <p><span style="font-weight: 400;">O</span>ur third workshop in this series was held on November 23, in Prince Frederick County at the Calvert Main Library where teens attended the third Poet Laureate workshop.&nbsp; Thirteen years of age is the youngest age set for participation, with eighteen years as the ideal top range.</p>
+                                    <p>During this workshop, teens found space within themselves to explore unknown territory. Through “writing prompts” that evoke interior experience, they recalled and expressed. The creative process is not therapy, although it has healing effects. We do not question <em>why</em>, we simply acknowledge and share, focusing on language, line lengths, and—more than anything—finding the truth in ourselves. Self-discovery is one main value of writing. The product of our writing is the souvenir.</p>
+                                    <p>Each student participated in the writing and recording process because Teens want to be SEEN and HEARD!</p>
+                                    <p>This workshop was sponsored by the Fund for the Future of our Children and the Maryland Arts Council.</p>
+                                    <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+                                    <audio controls=controls>
+                                        <source src="https://www.futureofchildren.net/wp-content/uploads/2020/01/teen-poets-calvert-county3.mp3" type="audio/mpeg" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                    <p>&nbsp;</p>
+                                    <hr />
+                                    <p>
+                                        <strong>
+                                            Howard County MD, October 12, 2019:<br />
+                                        </strong><br />
+                                        <span style="text-decoration: underline;"><a href="https://www.futureofchildren.net/wp-content/uploads/2019/11/FFC1.png"><img loading="lazy" class="alignnone wp-image-3898" src="./Resources/FFC1-150x150.png" alt="" width="300" height="225" srcset="https://www.futureofchildren.net/wp-content/uploads/2019/11/FFC1-300x225.png 300w, https://www.futureofchildren.net/wp-content/uploads/2019/11/FFC1-768x576.png 768w, https://www.futureofchildren.net/wp-content/uploads/2019/11/FFC1-1024x768.png 1024w, https://www.futureofchildren.net/wp-content/uploads/2019/11/FFC1.png 1280w" sizes="(max-width: 300px) 100vw, 300px" /></a><a href="https://www.futureofchildren.net/wp-content/uploads/2019/11/FFC2.png"><img loading="lazy" class="alignnone wp-image-3899" src="./Resources/FFC2-150x150.png" alt="" width="300" height="225" srcset="https://www.futureofchildren.net/wp-content/uploads/2019/11/FFC2-300x225.png 300w, https://www.futureofchildren.net/wp-content/uploads/2019/11/FFC2-768x576.png 768w, https://www.futureofchildren.net/wp-content/uploads/2019/11/FFC2-1024x768.png 1024w, https://www.futureofchildren.net/wp-content/uploads/2019/11/FFC2.png 1280w" sizes="(max-width: 300px) 100vw, 300px" /></a><a href="https://www.futureofchildren.net/wp-content/uploads/2019/11/FFC3_final-1.png"><img loading="lazy" class="alignnone wp-image-3902" src="./Resources/FFC3_final-1-150x150.png" alt="" width="300" height="225" srcset="https://www.futureofchildren.net/wp-content/uploads/2019/11/FFC3_final-1-300x225.png 300w, https://www.futureofchildren.net/wp-content/uploads/2019/11/FFC3_final-1-768x576.png 768w, https://www.futureofchildren.net/wp-content/uploads/2019/11/FFC3_final-1-1024x768.png 1024w, https://www.futureofchildren.net/wp-content/uploads/2019/11/FFC3_final-1.png 1280w" sizes="(max-width: 300px) 100vw, 300px" /></a><a href="https://www.futureofchildren.net/wp-content/uploads/2019/11/FFC4.png"><img loading="lazy" class="alignnone size-medium wp-image-3904" src="./Resources/FFC4-300x225.png" alt="" width="300" height="225" srcset="https://www.futureofchildren.net/wp-content/uploads/2019/11/FFC4-300x225.png 300w, https://www.futureofchildren.net/wp-content/uploads/2019/11/FFC4-768x576.png 768w, https://www.futureofchildren.net/wp-content/uploads/2019/11/FFC4-1024x768.png 1024w, https://www.futureofchildren.net/wp-content/uploads/2019/11/FFC4.png 1280w" sizes="(max-width: 300px) 100vw, 300px" /></a> </span>
+                                    </p>
+                                    <p><span style="font-weight: 400;">Our second workshop in this series was held on October 12, 2019 in Howard County, Maryland at Howard County Community College.&nbsp; Six Middle school students ages 13-7 attended the second Poet Laureate workshop. Thirteen&nbsp;years of age is the youngest age set for participation, with eighteen years as the ideal top range.&nbsp;&nbsp;</span></p>
+                                    <p><span style="font-weight: 400;">Young writers entered the elevator of their inner lives to find their deepest thoughts. They expressed what in this world made them </span><i><span style="font-weight: 400;">happy,</span></i><span style="font-weight: 400;"> and what made them </span><i><span style="font-weight: 400;">afraid.</span></i><span style="font-weight: 400;"> They also enjoy “Photo Ops” and “Microphones,” so dominant in our culture.</span></p>
+                                    <p><span style="font-weight: 400;">Each student participated in the writing and recording process because Teens want to be SEEN and HEARD!&nbsp;&nbsp;</span></p>
+                                    <p><span style="font-weight: 400;">This workshop was sponsored by the Fund for the Future of our Children, the&nbsp;Maryland Arts Council and the Howard County Poetry &amp; Literature Society (HoCoPoLitSo) founded in 1974.</span></p>
+                                    <audio controls=controls>
+                                        <source src="https://www.futureofchildren.net/wp-content/uploads/2019/11/Teen-Poetry-Podcast.mp3" type="audio/mpeg" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+
+                                    <p>&nbsp;</p>
+                                    <hr />
+                                    <p>
+                                        <strong>
+                                            <b>Salisbury MD, Sept 21, 2019</b>:<br />
+                                        </strong><br />
+                                        <span style="text-decoration: underline;"><img loading="lazy" class="wp-image-3875 alignnone" src="./Resources/image1-150x150.png" alt="" width="250" height="188" srcset="https://www.futureofchildren.net/wp-content/uploads/2019/10/image1-300x225.png 300w, https://www.futureofchildren.net/wp-content/uploads/2019/10/image1-768x577.png 768w, https://www.futureofchildren.net/wp-content/uploads/2019/10/image1.png 910w" sizes="(max-width: 250px) 100vw, 250px" /> <img loading="lazy" class="alignnone wp-image-3876" src="./Resources/image2-150x150.png" alt="" width="250" height="188" srcset="https://www.futureofchildren.net/wp-content/uploads/2019/10/image2-300x225.png 300w, https://www.futureofchildren.net/wp-content/uploads/2019/10/image2-768x577.png 768w, https://www.futureofchildren.net/wp-content/uploads/2019/10/image2.png 910w" sizes="(max-width: 250px) 100vw, 250px" /></span>
+                                    </p>
+                                    <p><span style="font-weight: 400;">The first workshop was held on September 21, 2019 in Salisbury, Maryland.&nbsp; Eight Middle school students attended the inaugural Poet Laureate workshop. They were 8th graders, age 13. Thirteen&nbsp;is the youngest age set for participation.&nbsp;&nbsp;</span></p>
+                                    <p><span style="font-weight: 400;">Every person participated and they loved the “photo ops” and “recordings’” because Teens want to be SEEN and HEARD!</span></p>
+                                    <p><strong>Teens: Seen and Heard</strong></p>
+                                    <audio controls=controls>
+                                        <source src="https://www.futureofchildren.net/wp-content/uploads/2019/10/TEENWKSHP_SALISBURY_9_21_19.mp3" type="audio/mpeg" />
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                    <hr />                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwoBot">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoBot" aria-expanded="true" aria-controls="collapseTwoBot">
+                                    <span style="font-size:x-large">Voices of Maryland Poets </span>
+                                </button>
+                            </h2>
+
+                            <div id="collapseTwoBot" class="accordion-collapse collapse" aria-labelledby="headingTwoBot" data-bs-parent="#accordionExampleBot">
+                                <div class="accordion-body">
+
+                                    <UL>                                                                                
+                                            <li><a target="_blank" href="https://www.youtube.com/embed/esB56gJtfqU">Rita Dove</a></li>
+                                            <li><a target="_blank" href="https://www.youtube.com/embed/YAethSHE2w8">StanleyKunitz</a></li>
+                                            <li><a target="_blank" href="https://www.youtube.com/embed/poAPiAJu8pw">Robert Pinsky</a></li>                                        
+                                            <li><a target="_blank" href="https://www.youtube.com/embed/jdFpb1JEACk">Ted Kooser</a></li>                                        
+                                            <li><a target="_blank" href="https://www.youtube.com/embed/faF9HwVyrPo">Robert Penn Warren</a></li>
+                                            <li><a target="_blank" href="https://www.youtube.com/embed/eGBge-Zja1M">Robert Hayden</a></li>
+                                            <li><a target="_blank" href="https://www.youtube.com/embed/_gIo0htC6Tw">Robert Hass</a></li>
+                                            <li><a target="_blank" href="https://www.youtube.com/embed/xhzauHDg04k">Lucille Clifton</a></li>
+                                            <li><a target="_blank" href="https://www.youtube.com/embed/OcQQTIGaPeE">Louise Bogan</a></li>                                        
+                                    </UL>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThreeBot">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeBot" aria-expanded="true" aria-controls="collapseThreeBot">
+                                    <span style="font-size:x-large">U.S. Poets Laureate Who Were Maryland Residents</span>
+                                </button>
+                            </h2>
+
+                            <div id="collapseThreeBot" class="accordion-collapse collapse" aria-labelledby="headingThreeBot" data-bs-parent="#accordionExampleBot">
+                                <div class="accordion-body">
+                                    <p><b>Pulitzer Prize Winner William Meredith</b> served as U.S. Consultant In Poetry to The Library Of Congress, 1978-1980, a term now known as U.S. Poet Laureate,</p>
+
+                                    <p>Commentary by  Grace Cavalieri&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4 minutes</p>
+
+                                    <div class="sizer">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/X0d-P3CT4Ls" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=allowfullscreen></iframe>
+                                    </div>
+                                    <br />
+                                    <hr />
+                                    <br />
+                                    <p><b>Josephine Jacobsen</b> was a Canadian-born American poet, short story writer, essayist, and critic. She was appointed the twenty-first Poet Laureate Consultant in Poetry to the Library of Congress in 1971. In 1997, she received the Poetry Society of America’s highest award, the Robert Frost Medal for Lifetime Achievement in Poetry. Jacobsen lived in Baltimore, MD.</p>
+
+                                    <div class="sizer">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/STn9mbO4fkI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=allowfullscreen></iframe>
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+</body>
+
+</html>
