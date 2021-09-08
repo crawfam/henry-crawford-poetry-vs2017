@@ -81,6 +81,23 @@
         .poem h1, h2, h3, h4 {
             color: #000000;
         }
+
+
+        #pop {
+            display: none;
+            position: absolute;
+            z-index: 99999;
+            padding: 10px;
+            background: #3AB9AE;
+            border: 1px solid #A2ADBC;
+            -moz-border-radius: 20px;
+            -webkit-border-radius: 20px;
+            margin: 0px;
+            -webkit-box-shadow: 0px 0px 5px 0px rgba(164, 164, 164, 1);
+            box-shadow: 0px 0px 5px 0px rgba(164, 164, 164, 1);
+        }
+
+
     </style>
 	
 </head>
@@ -98,13 +115,12 @@
     </nav>
 
     <div id="poem_leaving" class="container-fluid">
-
         <div class="row">
             <div class="col-md-5 col-md-offset-1">
                 <h2>Leaving</h2>
                 <p>
                     In my last days in that town I stole a bike<br />
-                    right outside the Rite-Aid. I took it<br />
+                    right outside the <a class="popper" href="">Rite-Aid</a>. I took it<br />
                     to the places I wanted to remember<br />
                     like a dog marking out old ground.<br />
                     <br />
@@ -137,20 +153,22 @@
                     First Published in District Lit
                 </p>
             </div>
-        </div>    
+        </div>
+        <div id="pop">
+            <p>I am a popup!</p>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
         <br />
         <br />
         <br />
         <br />
         <br />
-        
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />                
-                    
+
         <footer class="navbar-default navbar-fixed-bottom">
             <div class="row heading-footer-strip">
                 <div>
@@ -165,6 +183,12 @@
         $(document).ready(function () {
             $("[data-toggle='tooltip']").tooltip();
             $('[data-toggle="popover"]').popover();            
+        });
+
+        $(function () {
+            $('a.popper').hover(function () {
+                $('#pop').toggle();
+            });
         });
         
     </script>
